@@ -1,1 +1,1 @@
-document.write('<footer><div class="d1" id="footer"><a href="http://rs3i.web.fc2.com/index.html">トップページ</a></div></footer>');
+document.write('<footer><div class="d1" id="footer"><a href="http://qiring.net/rs3i/index.html">繝医ャ繝励�壹�ｼ繧ｸ</a></div></footer>');
