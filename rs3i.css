@@ -1,0 +1,390 @@
+body {
+  font-size       : 1em;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  color           : #585858;
+  background-color: #8b97ad;
+  margin          : 0px;
+  padding         : 0.8em 0px;
+  text-align      : center; /* for IE */
+}
+
+a {
+  color           : #2971a7;
+  text-decoration : none;
+}
+
+a:hover {
+  text-decoration : underline;
+}
+
+a:visited {
+  color           : #004076;
+}
+
+div.d1 {
+  padding         : 1em 2em 1em;
+  background-color: #ffffff;
+  max-width       : 800px;
+  text-align      : left;
+  margin          : 2px auto 0px;
+}
+
+header {
+  position        : sticky;
+  top             : 0;
+  border-bottom   : 1px solid #8b97ad;
+}
+
+#header {
+  font-weight  : bold;
+  text-align      : center;
+  margin          : 0px auto 0px;
+  border-top-left-radius  : 4px;
+  border-top-right-radius : 4px;
+}
+
+#data {
+  text-align      : left;
+}
+
+#footer {
+  text-align      : center;
+  margin          : 3px auto 0px;
+  border-bottom-left-radius  : 4px;
+  border-bottom-right-radius : 4px;
+}
+
+@media screen and (max-width: 1080px) { /*ウィンドウ幅が最大1080pxまでの場合に適用*/
+div.d1 {
+  max-width       : 100%;
+}
+
+#header {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#footer {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+}
+
+h1 {
+  font-size    : 1.5em;
+  font-weight  : bold;
+  color        : #4b576d;
+  padding      : 0em;
+  margin       : 0em;
+/*   background-color: #B8C8E9;   */
+}
+
+h2 {
+  font-size    : 1.25em;
+  font-weight  : normal;
+  border       : 2px solid #8b97ad;
+  margin       : 1.5em 0em 0.25em;
+  padding      : 0.25em;
+  color        : #444444;
+}
+
+h3 {
+  font-size    : 1.25em;
+  font-weight  : normal;
+  border-bottom: 1px solid #8b97ad;
+  border-left  : 5px solid #8b97ad;
+  margin       : 1.5em 0em 0.25em;
+  padding      : 0.25em;
+  color        : #444444;
+}
+
+h4 {
+  font-size    : 1.0em;
+  font-weight  : bold;
+  border-left  : 3px solid #8b97ad;
+  margin       : 1.25em 1em 0.25em;
+  padding      : 0.15em;
+  color        : #333333;
+}
+
+div.footmap {
+  text-align    : center;
+  margin-top    : 2em;
+  padding-top   : 1em;
+  border-top    : 2px solid #8b97ad;
+}
+
+div.frame {
+  border     : 1px dotted #8b97ad;
+  margin     : 0.25em 1em;
+  padding    : 0.25em 1em;
+}
+
+table {
+  border-collapse : collapse;
+  margin          : 0.75em 1em;
+}
+
+table.scrl {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+caption {
+  font-size    : 0.8em;
+  font-weight  : bold;
+}
+
+th {
+  font-size       : 0.8em;
+  font-weight     : normal;
+  border          : 1px solid #8b97ad;
+  background-color: #B8C8E9;
+}
+
+td {
+  font-size       : 0.8em;
+  padding         : 0px 3px;
+  border          : 1px solid #B8C8E9;
+  background-color: #ffffff;
+}
+
+td.trans {
+  border          : 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
+td.red {
+  border          : 1px solid #8b97ad;
+  background-color: #ffbfbf;
+  text-align      : center;
+}
+
+td.blue {
+  border          : 1px solid #8b97ad;
+  background-color: #bfbfff;
+  text-align      : center;
+}
+
+td.pink {
+  border          : 1px solid #b8c8e9;
+  background-color: #ffd5d5;
+}
+
+p {
+  margin  : 0.75em 0em 0.75em 1em;
+}
+
+ul {
+  margin         : 1em 0em 1em 1em;
+  padding-left   : 2em;
+  list-style     : square;
+}
+
+ol {
+  margin         : 1em 0em 1em 1em;
+  padding-left   : 2em;
+}
+
+ul.compact {
+  overflow       : hidden;
+  list-style     : square !important;
+}
+
+li.compact {
+  width: 14em;
+  float: left;
+}
+
+li.compact10 {
+  width: 10em;
+  float: left;
+}
+
+li.compact6 {
+  width: 6em;
+  float: left;
+}
+
+@media screen and (max-width: 1080px) { /*ウィンドウ幅が最大1080pxまでの場合に適用*/
+}
+
+dl {
+  margin         : 1em 0em 1em 1em;
+}
+
+dt {
+  margin-top     : 0.5em;
+  font-weight    : bold;
+}
+
+dt.compact {
+  margin-top     : 0em;
+  font-weight    : normal;
+  clear: left;
+  float: left;
+  width: 12em;
+}
+
+@media screen and (max-width: 1080px) { /*ウィンドウ幅が最大1080pxまでの場合に適用*/
+dt.compact {
+  font-weight    : bold;
+  clear: none;
+  float: none;
+}
+}
+
+dd {
+  font-weight    : normal;
+  margin-left    : 2em;
+}
+
+.itemnm {
+  color          : #8b97ad;
+  font-weight    : bold;
+}
+
+img {
+  border: 0px;
+}
+
+.noindent {
+  margin-right : 0em !important;
+  margin-left  : 0em !important;
+}
+
+.indent2 {
+  margin-left  : 2em !important;
+}
+
+span.right {
+  float        : right;
+}
+
+ol.brackets {
+  counter-reset: olcount 0;
+}
+
+ol.brackets>li {
+  list-style-type: none;
+}
+
+ol.brackets>li:before {
+  content: "(" counter(olcount) ")";
+  counter-increment: olcount 1;
+}
+
+blockquote {
+  border     : 1px dotted #8b97ad !important;
+  margin     : 0.25em auto;
+  padding    : 0.25em 1em;
+  width      : 80%;
+}
+
+/* ------------------------------- */
+/* for index.html                  */
+/* ------------------------------- */
+
+span.name {
+  float        : left;
+}
+
+span.link {
+  float        : right;
+}
+
+/*div.index {
+  padding : 0em 5em;
+}*/
+
+div.index_ie { /* for IE */
+  padding : 0em 6em;
+}
+
+div.maincol {
+  float        : left;
+  text-align   : left;
+  width        : 52%;
+/*   width        : 25em; */
+}
+
+div.subcol {
+  float        : right;
+  text-align   : left;
+  width        : 46%;
+}
+
+div.clear {
+  clear        : both;
+  margin       : auto;
+}
+
+@media screen and (max-width: 1080px) { /*ウィンドウ幅が最大1080pxまでの場合に適用*/
+div.maincol {
+  float        : none;
+  width        : 100%;
+}
+div.subcol {
+  padding-top  : 1em;
+  float        : none;
+  width        : 100%;
+}
+}
+
+/* sub column */
+div.subcol h4 {
+  font-size       : 0.8em;
+  border          : 1px solid #8b97ad;
+  margin          : 0.75em 0px 0px;
+  padding         : 2px 4px;
+  color           : #585858;
+  background-color: #becadf;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+div.subcol h4 span a{
+  color           : #585858 !important;
+  text-decoration : none;
+}
+div.subcol ul, div.subcol dl {
+  list-style-type : none;
+  border          : 1px solid #8b97ad;
+  padding         : 2px 1em 2px 4px;
+  margin          : 0px 0px 0.75em;
+  border-top-width: 0px;
+}
+div.subcol ul li { 
+  padding        : 1px 0px;
+}
+div.subcol dl dd, div.subcol dl dt { 
+  padding        : 1px 0px;
+  margin         : 0em;
+  font-weight    : normal;
+}
+div.counter {
+  margin         : 0.75em 0px;
+}
+
+/* main column */
+div.maincol h5 {
+  font-size      : 1em;
+  font-weight    : bold;
+  margin         : 0.75em 0px 2px;
+  padding        : 2px 0px;
+  border-bottom  : 1px solid #8b97ad;
+  color           : #585858;
+}
+div.maincol h5 span a{
+  color           : #585858 !important;
+  text-decoration : none;
+}
+div.maincol ul { 
+  list-style-type: none;
+  margin         : 0px 0px 0.75em;
+  padding        : 1px 1em 1px 0px;
+}
+div.maincol ul li{ 
+  padding        : 1px 0px;
+}
