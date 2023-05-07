@@ -1,0 +1,1 @@
+document.write('<header><div class="d1" id="header"><a href="http://rs3i.web.fc2.com/index.html">ロマサガ3のアイテムのページ</a></div></header>');
