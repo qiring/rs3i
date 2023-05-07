@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>キャラクター初期設定2 - ロマサガ3のアイテムのページ</title>
+  <link rel="stylesheet" type="text/css" href="../rs3i.css">
+</head>
+
+<body>
+<script src="../header.js"></script>
+
+<article>
+<div class="d1" id="data">
+  <h1>キャラクター初期設定2</h1>
+  <p>ROM解析から得られたキャラクター初期設定です。<br>
+    ここでは、LP、HP、各武器・術レベル、増幅レベルの初期値の他に、戦闘以外でのレベルアップ（バグレベルアップなど）の可否を扱っています。</p>
+  <p>LPが<b><font color="blue">青字</font></b>表示されているキャラは、気絶と同時に消滅し戦闘後強制的に復活します。該当キャラはレオニードのみです。</p>
+  <p>初期HP、武器・術・増殖レベルのうち<font color="red"><b>赤字</b></font>で表示されているものは、バグレベルアップ等の戦闘以外でのレベルアップが可能です。そのため、はじめて仲間になったときのレベルが初期値と一致しない事があります。詳細は<a href="06shinki.html">新規加入キャラの成長</a>で解説します。</p>
+  <p>増幅レベルは、<a href="http://korotan.xrea.jp/">「コロタンの部屋」</a>の「ミニ知識」で詳しく解説されています。</p>
+  <div align="center">
+  <table>
+      <tr>
+        <th width="104">キャラクター名</th>
+        <th width="30">LP</th>
+        <th width="30">HP</th>
+        <th width="40">剣･大剣Lv</th>
+        <th width="40">斧･棍棒Lv</th>
+        <th width="40">小剣･槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td width="104">ユリアン</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>80</b></font></td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">エレン</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>85</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">サラ</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>70</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>0</b></font></td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">トーマス</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>75</b></font></td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right">玄武</td>
+        <td align="right">2</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40"><font color="red"><b>0</b></font></td>
+      </tr>
+      <tr>
+        <td width="104">ハリード</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>170</b></font></td>
+        <td align="right" width="40"><font color="red"><b>7</b></font></td>
+        <td align="right" width="40">2</td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ミカエル</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>145</b></font></td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right" width="40">3</td>
+        <td align="right" width="40"><font color="red"><b>7</b></font></td>
+        <td align="right" width="40">2</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">太陽</td>
+        <td align="right">5</td>
+        <td align="right" width="40"><font color="red"><b>5</b></font></td>
+      </tr>
+      <tr>
+        <td width="104">モニカ</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>65</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">カタリナ</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>140</b></font></td>
+        <td align="right" width="40"><font color="red"><b>6</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>4</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">レオニード</td>
+        <td align="right" width="30"><font color="blue"><b>0</b></font></td>
+        <td align="right" width="30">666</td>
+        <td align="right" width="40">20</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">20</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">20</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">少年</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>180</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ティベリウス</td>
+        <td align="right" width="30">8</td>
+        <td align="right" width="30"><font color="red"><b>90</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>1</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>玄武</b></font></td>
+        <td align="right"><font color="red"><b>9</b></font></td>
+        <td align="right"><font color="red"><b>太陽</b></font></td>
+        <td align="right"><font color="red"><b>4</b></font></td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ウォード</td>
+        <td align="right" width="30">15</td>
+        <td align="right" width="30"><font color="red"><b>180</b></font></td>
+        <td align="right" width="40"><font color="red"><b>7</b></font></td>
+        <td align="right" width="40"><font color="red"><b>4</b></font></td>
+        <td align="right" width="40">4</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">4</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ポール</td>
+        <td align="right" width="30">11</td>
+        <td align="right" width="30"><font color="red"><b>120</b></font></td>
+        <td align="right" width="40"><font color="red"><b>2</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>5</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（細）</td>
+        <td align="right" width="30">12</td>
+        <td align="right" width="30"><font color="red"><b>180</b></font></td>
+        <td align="right" width="40">10</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>10</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>蒼龍</b></font></td>
+        <td align="right"><font color="red"><b>10</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（太）</td>
+        <td align="right" width="30">9</td>
+        <td align="right" width="30"><font color="red"><b>200</b></font></td>
+        <td align="right" width="40"><font color="red"><b>6</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>12</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ミューズ</td>
+        <td align="right" width="30">6</td>
+        <td align="right" width="30"><font color="red"><b>110</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">シャール</td>
+        <td align="right" width="30">9</td>
+        <td align="right" width="30"><font color="red"><b>240</b></font></td>
+        <td align="right" width="40">10</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>朱鳥</b></font></td>
+        <td align="right"><font color="red"><b>15</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">詩人</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>120</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">タチアナ</td>
+        <td align="right" width="30">10</td>
+        <td align="right" width="30"><font color="red"><b>65</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>0</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ヤン   
+        ファン</td>
+        <td align="right" width="30">12</td>
+        <td align="right" width="30"><font color="red"><b>250</b></font></td>
+        <td align="right" width="40">5</td>
+        <td align="right" width="40"><font color="red"><b>5</b></font></td>
+        <td align="right" width="40">5</td>
+        <td align="right" width="40">5</td>
+        <td align="right" width="40"><font color="red"><b>10</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right"><font color="red"><b>月</b></font></td>
+        <td align="right"><font color="red"><b>15</b></font></td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ウンディーネ</td>
+        <td align="right" width="30">7</td>
+        <td align="right" width="30"><font color="red"><b>330</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">玄武</td>
+        <td align="right">21</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ツィー   
+        リン</td>
+        <td align="right" width="30">12</td>
+        <td align="right" width="30"><font color="red"><b>160</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>13</b></font></td>
+        <td align="right" width="40">11</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ハーマン</td>
+        <td align="right" width="30">4</td>
+        <td align="right" width="30"><font color="red"><b>210</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>9</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>蒼龍</b></font></td>
+        <td align="right"><font color="red"><b>7</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">フルブライト</td>
+        <td align="right" width="30">9</td>
+        <td align="right" width="30"><font color="red"><b>180</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">5</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>白虎</b></font></td>
+        <td align="right"><font color="red"><b>5</b></font></td>
+        <td align="right"><font color="red"><b>太陽</b></font></td>
+        <td align="right"><font color="red"><b>5</b></font></td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">バイ   
+        メイニャン</td>
+        <td align="right" width="30">13</td>
+        <td align="right" width="30"><font color="red"><b>300</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">蒼龍</td>
+        <td align="right">27</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ノーラ</td>
+        <td align="right" width="30">14</td>
+        <td align="right" width="30"><font color="red"><b>140</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>8</b></font></td>
+        <td align="right" width="40"><font color="red"><b>4</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ブラック</td>
+        <td align="right" width="30">12</td>
+        <td align="right" width="30"><font color="red"><b>210</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>9</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right"><font color="red"><b>蒼龍</b></font></td>
+        <td align="right"><font color="red"><b>7</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ようせい</td>
+        <td align="right" width="30">7</td>
+        <td align="right" width="30"><font color="red"><b>140</b></font></td>
+        <td align="right" width="40">10</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>14</b></font></td>
+        <td align="right" width="40"><font color="red"><b>8</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ボストン</td>
+        <td align="right" width="30">17</td>
+        <td align="right" width="30"><font color="red"><b>170</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>15</b></font></td>
+        <td align="right"><font color="red"><b>玄武</b></font></td>
+        <td align="right"><font color="red"><b>10</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ぞう</td>
+        <td align="right" width="30">36</td>
+        <td align="right" width="30"><font color="red"><b>280</b></font></td>
+        <td align="right" width="40"><font color="red"><b>3</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>12</b></font></td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td width="104">ゆきだるま</td>
+        <td align="right" width="30">8</td>
+        <td align="right" width="30"><font color="red"><b>180</b></font></td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">5</td>
+        <td align="right">玄武</td>
+        <td align="right">15</td>
+        <td align="right">なし</td>
+        <td align="right">　</td>
+        <td align="right" width="40">0</td>
+      </tr>
+    </table>
+  </div>
+<div class="footmap">
+  [ <a href="01default1-1.html">前へ</a> ][ <a href="04souninzu.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
+</div>
+</div>
+</article>
+
+<script src="../footer.js"></script>
+
+</body>
+</html>

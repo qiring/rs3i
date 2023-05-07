@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>バグレベルアップ1 - ロマサガ3のアイテムのページ</title>
+  <link rel="stylesheet" type="text/css" href="../rs3i.css">
+</head>
+
+<body>
+<script src="../header.js"></script>
+
+<article>
+<div class="d1" id="data">
+  <h1>バグレベルアップ1</h1>
+  <h3>1.バグレベルアップの概要</h3>
+  <p>
+    バグレベルアップは、ある条件下で特定の操作をすると、戦闘を経ずにキャラクターが成長するという便利な裏技です。<br>
+    これを繰り返すことで、一部パラメータだけですが最大値まで上げることができます。ロマサガ3は自力で武器レベルを最大にしようとするととんでもない時間を要するため、大変利用価値の高い裏技だと言えます。<br>
+    <br>
+    バグレベルアップを行うときの操作はきわめて簡単。<br>
+  </p>
+  <div align="center">
+    <div class="frame" style="width:80%">レベルアップしたいキャラをパブなどで外す→セーブ→リセット→リロード→外した仲間と再会</div>
+  </div>
+  <p>
+    という手順になります。<br>
+    ただし、その前に一定の条件を満たしておく必要があり、それを明らかにするのがこのレポートの目的です。<br>
+    <br>
+    このページでは、バグレベルアップのメカニズムを具体例を通して解説します。<br>
+    もともとセーブデータ解析から解明されたため、ところどころ怪しげな用語がでてきます。読みにくいとは思いますが、勘弁してください。<br>
+  </p>
+  <h3>2.バグレベルアップの仕組み</h3>
+  <h4>第1段階：メンバーを外す前の状況</h4>
+  <p>
+    下の表1を見て下さい。<br>
+    <br>
+    現在このパーティーは主人公ハリード、エレン、ミカエル、トーマス、フルブライトの5人で構成されています。各キャラの各パラメータは表の通りとします。<br>
+    赤字で書かれているのは<a href="03default2.html">キャラクター初期設定2</a>で<font color="red"><b>赤字</b></font>で表記されたものと同じです。<br>
+    バグレベルアップが起こればここが変化します。<br>
+    <br>
+    パーティー外メンバーのスペースには既に20人が控えており、総人数は合計の25人となります。<br>
+    バグレベルアップを行うときのお供レベルは153とし、仲間を外してから再びスカウトするまでお供レベルは変化しないとします。要はこの間に戦闘をやらないということです。<br>
+    <br>
+    ゲームが動いている間、これらのデータはメモリ上に一時的に保存されています。わかる人はリアルタイムセーブのことだと解釈して下さい。<br>
+    ここにはパーティー外メンバーのために26人分のスペースが用意されています。したがってこの例では6人分の空きがあることになります。<br>
+  </p>
+  <div align="center">
+    <table>
+      <caption>表1：メモリー上のデータ（リアルタイムセーブ）</caption>
+      <tr>
+        <th colspan="2">　</th>
+        <th>キャラクター名</th>
+        <th width="40">離脱時お供Lv</th>
+        <th width="40">HP</th>
+        <th width="40">WP</th>
+        <th width="40">JP</th>
+        <th width="40">剣・大剣Lv</th>
+        <th width="40">斧・棍棒Lv</th>
+        <th width="40">小剣・槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td rowspan="6" class="red">内</td>
+        <td style="width:3em" class="red">1</td>
+        <td>ハリード</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>682</b></font></td>
+        <td align="right" width="40">197</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>41</b></font></td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="center">なし</td>
+        <td align="right">0</td>
+        <td align="center">なし</td>
+        <td align="right">0</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">2</td>
+        <td>エレン</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>483</b></font></td>
+        <td align="right" width="40">154</td>
+        <td align="right" width="40">86</td>
+        <td align="right" width="40">14</td>
+        <td align="right" width="40"><font color="red"><b>33</b></font></td>
+        <td align="right" width="40">21</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40"><font color="red"><b>38</b></font></td>
+        <td align="center">蒼龍</td>
+        <td align="right">20</td>
+        <td align="center">月</td>
+        <td align="right">24</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">3</td>
+        <td>ミカエル</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>623</b></font></td>
+        <td align="right" width="40">147</td>
+        <td align="right" width="40">94</td>
+        <td align="right" width="40"><font color="red"><b>24</b></font></td>
+        <td align="right" width="40">25</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">16</td>
+        <td align="right" width="40">0</td>
+        <td align="center">朱鳥</td>
+        <td align="right">23</td>
+        <td align="center">太陽</td>
+        <td align="right">30</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">4</td>
+        <td>トーマス</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>556</b></font></td>
+        <td align="right" width="40">150</td>
+        <td align="right" width="40">95</td>
+        <td align="right" width="40"><font color="red"><b>23</b></font></td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="right" width="40"><font color="red"><b>40</b></font></td>
+        <td align="right" width="40"><font color="red"><b>26</b></font></td>
+        <td align="right" width="40"><font color="red"><b>8</b></font></td>
+        <td align="center">玄武</td>
+        <td align="right">33</td>
+        <td align="center">月</td>
+        <td align="right">29</td>
+        <td align="right" width="40"><font color="red"><b>0</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">5</td>
+        <td>フルブライト</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>431</b></font></td>
+        <td align="right" width="40">56</td>
+        <td align="right" width="40">152</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">16</td>
+        <td align="right" width="40">9</td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40">0</td>
+        <td align="center"><font color="red"><b>白虎</b></font></td>
+        <td align="right"><font color="red"><b>41</b></font></td>
+        <td align="center"><font color="red"><b>太陽</b></font></td>
+        <td align="right"><font color="red"><b>37</b></font></td>
+        <td align="right" width="40">2</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">6</td>
+        <td align="center" colspan="16">1人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="blue">外</td>
+        <td style="width:3em" class="blue">1～20</td>
+        <td align="center" colspan="16">20人分のデータ</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">21～26</td>
+        <td align="center" colspan="16">6人分の空きスペース</td>
+      </tr>
+    </table>
+  </div>
+  <h4>第2段階：メンバーを外したときの状況</h4>
+  <p>
+    表2を見て下さい。<br>
+    <br>
+    主人公ハリードを除く4人をパーティーから外します。<br>
+    外す順番は<strong>エレン→ミカエル→トーマス→フルブライト</strong>とします。<br>
+    <br>
+    別れたキャラのデータは外した順にパーティー外メンバーのスペースに移されます。<br>
+    パーティー内には主人公ハリード１人、パーティー外メンバーのスペースには24人がいます。<br>
+    また、この時外れたメンバーのデータには外したときのお供レベル（153）が記録されます。<br>
+  </p>
+  <div align="center">
+    <table>
+      <caption>表2：メモリー上のデータ（リアルタイムセーブ）</caption>
+      <tr>
+        <th colspan="2">　</th>
+        <th>キャラクター名</th>
+        <th width="40">離脱時お供Lv</th>
+        <th width="40">HP</th>
+        <th width="40">WP</th>
+        <th width="40">JP</th>
+        <th width="40">剣・大剣Lv</th>
+        <th width="40">斧・棍棒Lv</th>
+        <th width="40">小剣・槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td rowspan="2" class="red">内</td>
+        <td style="width:3em" class="red">1</td>
+        <td>ハリード</td>
+        <td align="right" width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>682</b></font></td>
+        <td align="right" width="40">197</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>41</b></font></td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="center">なし</td>
+        <td align="right">0</td>
+        <td align="center">なし</td>
+        <td align="right">0</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">2～6</td>
+        <td align="center" colspan="16">5人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td rowspan="7" class="blue">外</td>
+        <td style="width:3em" class="blue">1～20</td>
+        <td align="center" colspan="16">20人分のデータ</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">21</td>
+        <td>エレン</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>483</b></font></td>
+        <td align="right" width="40">154</td>
+        <td align="right" width="40">86</td>
+        <td align="right" width="40">14</td>
+        <td align="right" width="40"><font color="red"><b>33</b></font></td>
+        <td align="right" width="40">21</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40"><font color="red"><b>38</b></font></td>
+        <td align="center">蒼龍</td>
+        <td align="right">20</td>
+        <td align="center">月</td>
+        <td align="right">24</td>
+        <td width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">22</td>
+        <td>ミカエル</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>623</b></font></td>
+        <td align="right" width="40">147</td>
+        <td align="right" width="40">94</td>
+        <td align="right" width="40"><font color="red"><b>24</b></font></td>
+        <td align="right" width="40">25</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">16</td>
+        <td align="right" width="40">0</td>
+        <td align="center">朱鳥</td>
+        <td align="right">23</td>
+        <td align="center">太陽</td>
+        <td align="right">30</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">23</td>
+        <td>トーマス</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>556</b></font></td>
+        <td align="right" width="40">150</td>
+        <td align="right" width="40">95</td>
+        <td align="right" width="40"><font color="red"><b>23</b></font></td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="right" width="40"><font color="red"><b>40</b></font></td>
+        <td align="right" width="40"><font color="red"><b>26</b></font></td>
+        <td align="right" width="40"><font color="red"><b>8</b></font></td>
+        <td align="center">玄武</td>
+        <td align="right">33</td>
+        <td align="center">月</td>
+        <td align="right">29</td>
+        <td align="right" width="40"><font color="red"><b>0</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">24</td>
+        <td>フルブライト</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>431</b></font></td>
+        <td align="right" width="40">56</td>
+        <td align="right" width="40">152</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40">16</td>
+        <td align="right" width="40">9</td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40">0</td>
+        <td align="center"><font color="red"><b>白虎</b></td>
+        <td align="right"><font color="red"><b>41</b></font></td>
+        <td align="center"><font color="red"><b>太陽</b></td>
+        <td align="right"><font color="red"><b>37</b></font></td>
+        <td align="right" width="40">2</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">25</td>
+        <td align="center" rowspan="2" colspan="16">2人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">26</td>
+      </tr>
+    </table>
+  </div>
+  <h4>第3段階：セーブ→リセットしたときの状況</h4>
+  <p>
+    さて、メニュー画面を開いてセーブし（ノーマルセーブ）、そのままリセットします（怪しげなものを使った怪しげなセーブではありませんよっ！）。<br>
+    リセットした時点でメモリー上に一時的に保存されていたデータは無効となります。<br>
+    先程のセーブによって作成されたセーブデータだけが頼りです。<br>
+    <br>
+    ところがこのセーブデータが頼りありません。<br>
+    セーブデータには、メモリー上で一時保存されていたデータのほんの一部しか引き継がれていません。<br>
+    引き継がれないものの例として、ライフトラップの復活、罠付き宝箱の復元が挙げられます。<br>
+    そして、このバグレベルアップもそのひとつなのです。<br>
+    <br>
+    表3を見て下さい。<br>
+    <br>
+    セーブデータには、<strong>パーティー外メンバーのスペースが21人分</strong>しか用意されていません。<br>
+    セーブ前には、パーティー外メンバーのスペースに24人がいました。<br>
+    さて残り3人はどこに行ったのでしょう？<br>
+    なんと、パーティー内メンバーのスペースにいます。<br>
+    このとき<strong>パーティー内メンバーのスペースに移されるのは外したメンバーのうち、後ろから数えて3人分</strong>。<br>
+    この例では、ミカエル、トーマス、フルブライトの3人となります。<br>
+    <br>
+    さらに、セーブデータ上のパーティー内メンバーのスペースには、外したときのお供レベルを記録する場所がありません。<br>
+    そのため<strong>外したときのお供レベルは闇へと葬り去られてしまいます</strong>。<br>
+  </p>
+  <div align="center">
+    <table>
+      <caption>表3：セーブデータ（ノーマルセーブ）</caption>
+      <tr>
+        <th colspan="2">　</th>
+        <th>キャラクター名</th>
+        <th width="40">離脱時お供Lv</th>
+        <th width="40">HP</th>
+        <th width="40">WP</th>
+        <th width="40">JP</th>
+        <th width="40">剣・大剣Lv</th>
+        <th width="40">斧・棍棒Lv</th>
+        <th width="40">小剣・槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td rowspan="6" class="red">内</td>
+        <td style="width:3em" class="red">1</td>
+        <td>ハリード</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>682</b></font></td>
+        <td align="right" width="40">197</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>41</b></font></td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">2</td>
+        <td class="pink">ミカエル</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>623</b></font></td>
+        <td align="right" width="40" class="pink">147</td>
+        <td align="right" width="40" class="pink">94</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>24</b></font></td>
+        <td align="right" width="40" class="pink">25</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink">朱鳥</td>
+        <td align="right" class="pink">23</td>
+        <td align="center" class="pink">太陽</td>
+        <td align="right" class="pink">30</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>18</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">3</td>
+        <td class="pink">トーマス</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>556</b></font></td>
+        <td align="right" width="40" class="pink">150</td>
+        <td align="right" width="40" class="pink">95</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>23</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>18</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>40</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>26</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>8</b></font></td>
+        <td align="center" class="pink">玄武</td>
+        <td align="right" class="pink">33</td>
+        <td align="center" class="pink">月</td>
+        <td align="right" class="pink">29</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>0</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">4</td>
+        <td class="pink">フルブライト</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>431</b></font></td>
+        <td align="right" width="40" class="pink">56</td>
+        <td align="right" width="40" class="pink">152</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">9</td>
+        <td align="right" width="40" class="pink">13</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink"><font color="red"><b>白虎</b></td>
+        <td align="right" class="pink"><font color="red"><b>41</b></font></td>
+        <td align="center" class="pink"><font color="red"><b>太陽</b></td>
+        <td align="right" class="pink"><font color="red"><b>37</b></font></td>
+        <td align="right" width="40" class="pink">2</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">5</td>
+        <td align="center" rowspan="2" colspan="16">2人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">6</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="blue">外</td>
+        <td style="width:3em" class="blue">1～20</td>
+        <td align="center" colspan="16">20人分のデータ</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">21</td>
+        <td>エレン</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>483</b></font></td>
+        <td align="right" width="40">154</td>
+        <td align="right" width="40">86</td>
+        <td align="right" width="40">14</td>
+        <td align="right" width="40"><font color="red"><b>33</b></font></td>
+        <td align="right" width="40">21</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40"><font color="red"><b>38</b></font></td>
+        <td align="center">蒼龍</td>
+        <td align="right">20</td>
+        <td align="center">月</td>
+        <td align="right">24</td>
+        <td align="right" width="40">0</td>
+      </tr>
+    </table>
+  </div>
+  <h4>第4段階：リロードしたときの状況</h4>
+  <p>
+    表4を見て下さい。<br>
+    <br>
+    リロードすることでセーブ前の状況が復元されますが、セーブの過程で変化してしまったものはそのままです。<br>
+    つまり、パーティー内メンバーのスペースに移された3人は、そのままパーティー内メンバーのスペースに留まっています。<br>
+    外したときのお供レベルも戻ってきません。<br>
+    <br>
+    3人のデータはパーティー内メンバーのスペースにありますが、<strong>彼らがメニュー画面に表示されるようなことはありません</strong>。<br>
+    パーティーの人数、各キャラクターの居場所が別のスペースに保存されているためです。<br>
+  </p>
+  <div align="center">
+    <table>
+      <caption>表4：メモリー上のデータ（リアルタイムセーブ）</caption>
+      <tr>
+        <th colspan="2">　</th>
+        <th>キャラクター名</th>
+        <th width="40">離脱時お供Lv</th>
+        <th width="40">HP</th>
+        <th width="40">WP</th>
+        <th width="40">JP</th>
+        <th width="40">剣・大剣Lv</th>
+        <th width="40">斧・棍棒Lv</th>
+        <th width="40">小剣・槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td rowspan="6" class="red">内</td>
+        <td style="width:3em" class="red">1</td>
+        <td>ハリード</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>682</b></font></td>
+        <td align="right" width="40">197</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>41</b></font></td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">2</td>
+        <td class="pink">ミカエル</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>623</b></font></td>
+        <td align="right" width="40" class="pink">147</td>
+        <td align="right" width="40" class="pink">94</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>24</b></font></td>
+        <td align="right" width="40" class="pink">25</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink">朱鳥</td>
+        <td align="right" class="pink">23</td>
+        <td align="center" class="pink">太陽</td>
+        <td align="right" class="pink">30</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>18</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">3</td>
+        <td class="pink">トーマス</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>556</b></font></td>
+        <td align="right" width="40" class="pink">150</td>
+        <td align="right" width="40" class="pink">95</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>23</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>18</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>40</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>26</b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b>8</b></font></td>
+        <td align="center" class="pink">玄武</td>
+        <td align="right" class="pink">33</td>
+        <td align="center" class="pink">月</td>
+        <td align="right" class="pink">29</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>0</b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">4</td>
+        <td class="pink">フルブライト</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b>431</b></font></td>
+        <td align="right" width="40" class="pink">56</td>
+        <td align="right" width="40" class="pink">152</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">9</td>
+        <td align="right" width="40" class="pink">13</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink"><font color="red"><b>白虎</b></td>
+        <td align="right" class="pink"><font color="red"><b>41</b></font></td>
+        <td align="center" class="pink"><font color="red"><b>太陽</b></td>
+        <td align="right" class="pink"><font color="red"><b>37</b></font></td>
+        <td align="right" width="40" class="pink">2</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">5</td>
+        <td align="center" rowspan="2" colspan="16">2人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">6</td>
+      </tr>
+      <tr>
+        <td rowspan="3" class="blue">外</td>
+        <td style="width:3em" class="blue">1～20</td>
+        <td align="center" colspan="16">20人分のデータ</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">21</td>
+        <td>エレン</td>
+        <td align="right" width="40">153</td>
+        <td align="right" width="40"><font color="red"><b>483</b></font></td>
+        <td align="right" width="40">154</td>
+        <td align="right" width="40">86</td>
+        <td align="right" width="40">14</td>
+        <td align="right" width="40"><font color="red"><b>33</b></font></td>
+        <td align="right" width="40">21</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40"><font color="red"><b>38</b></font></td>
+        <td align="center">蒼龍</td>
+        <td align="right">20</td>
+        <td align="center">月</td>
+        <td align="right">24</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">22～26</td>
+        <td align="center" colspan="16">5人分の空きスペース</td>
+      </tr>
+    </table>
+  </div>
+  <h4>第5段階：再加入したときの状況</h4>
+  <p>
+    さて、おさらいです。<br>
+    <br>
+    仲間になったことのあるキャラを外してまた入れただけなので、普通ならこの操作は<a href="05saikanyu.html">再加入メンバーの成長</a>として処理されます。<br>
+    この間お供レベルは全く変化していないので、お供レベルの差は153-153=0となります。<br>
+    HPも各種レベルも全く変化しないはずです。<br>
+    ところが、セーブ＆リロードの過程で、ミカエル、トーマス、フルブライトの3人の外したときのお供レベルが消滅しています。<br>
+    そのため、本来のお供レベル153のかわりに0を代入します。<br>
+    <br>
+    表5を見て下さい。<br>
+    この例ではミカエル、トーマス、フルブライトの3人がバグレベルアップします。<br>
+    彼らが再加入した時点で、所定のパラメータが上昇します（<font color="red"><b><u>赤字下線部</u></b></font>）。<br>
+    <a href="05saikanyu.html">再加入メンバーの成長</a>の式に、現在お供レベル153と外したときのお供レベル0を代入します。<br>
+    <br>
+    HP＝前HP＋｛（153-0）÷8｝×15→上昇値285<br>
+    武器・術・増幅Lv＝前Lv＋｛（153-0）÷16｝→上昇値9<br>
+      ただし、どちらも｛中カッコ｝を小数点以下切り捨て<br>
+    <br>
+    前HP：外したときのHP<br>
+    前Lv：外したときの武器・術・増幅レベル<br>
+  </p>
+  <div align="center">
+    <table>
+      <caption>表5：メモリー上のデータ（リアルタイムセーブ）</caption>
+      <tr>
+        <th colspan="2">　</th>
+        <th>キャラクター名</th>
+        <th width="40">離脱時お供Lv</th>
+        <th width="40">HP</th>
+        <th width="40">WP</th>
+        <th width="40">JP</th>
+        <th width="40">剣・大剣Lv</th>
+        <th width="40">斧・棍棒Lv</th>
+        <th width="40">小剣・槍Lv</th>
+        <th width="40">弓Lv</th>
+        <th width="40">体術Lv</th>
+        <th colspan="2">地術Lv</th>
+        <th colspan="2">天術Lv</th>
+        <th width="40">増幅Lv</th>
+      </tr>
+      <tr>
+        <td rowspan="6" class="red">内</td>
+        <td style="width:3em" class="red">1</td>
+        <td>ハリード</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>682</b></font></td>
+        <td align="right" width="40">197</td>
+        <td align="right" width="40">0</td>
+        <td align="right" width="40"><font color="red"><b>41</b></font></td>
+        <td align="right" width="40">13</td>
+        <td align="right" width="40"><font color="red"><b>32</b></font></td>
+        <td align="right" width="40">6</td>
+        <td align="right" width="40"><font color="red"><b>18</b></font></td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="center" align="center">なし</td>
+        <td align="right">0</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">2</td>
+        <td>エレン</td>
+        <td width="40">-</td>
+        <td align="right" width="40"><font color="red"><b>483</b></font></td>
+        <td align="right" width="40">154</td>
+        <td align="right" width="40">86</td>
+        <td align="right" width="40">14</td>
+        <td align="right" width="40"><font color="red"><b>33</b></font></td>
+        <td align="right" width="40">21</td>
+        <td align="right" width="40">15</td>
+        <td align="right" width="40"><font color="red"><b>38</b></font></td>
+        <td align="center">蒼龍</td>
+        <td align="right">20</td>
+        <td align="center">月</td>
+        <td align="right">24</td>
+        <td align="right" width="40">0</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">3</td>
+        <td class="pink">ミカエル</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>908</u></b></font></td>
+        <td align="right" width="40" class="pink">147</td>
+        <td align="right" width="40" class="pink">94</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>33</u></b></font></td>
+        <td align="right" width="40" class="pink">25</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>41</u></b></font></td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink">朱鳥</td>
+        <td align="right" class="pink">23</td>
+        <td align="center" class="pink">太陽</td>
+        <td align="right" class="pink">30</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>27</u></b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">4</td>
+        <td class="pink">トーマス</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>841</u></b></font></td>
+        <td align="right" width="40" class="pink">150</td>
+        <td align="right" width="40" class="pink">95</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>32</u></b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>27</u></b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>49</u></b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>35</u></b></font></td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>17</u></b></font></td>
+        <td align="center" class="pink">玄武</td>
+        <td align="right" class="pink">33</td>
+        <td align="center" class="pink">月</td>
+        <td align="right" class="pink">29</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>9</u></b></font></td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">5</td>
+        <td class="pink">フルブライト</td>
+        <td width="40" class="pink">-</td>
+        <td align="right" width="40" class="pink"><font color="red"><b><u>716</u></b></font></td>
+        <td align="right" width="40" class="pink">56</td>
+        <td align="right" width="40" class="pink">152</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="right" width="40" class="pink">16</td>
+        <td align="right" width="40" class="pink">9</td>
+        <td align="right" width="40" class="pink">13</td>
+        <td align="right" width="40" class="pink">0</td>
+        <td align="center" class="pink"><font color="red"><b><u>白虎</u></b></td>
+        <td align="right" class="pink"><font color="red"><b><u>50</u></b></font></td>
+        <td align="center" class="pink"><font color="red"><b><u>太陽</u></b></td>
+        <td align="right" class="pink"><font color="red"><b><u>46</u></b></font></td>
+        <td align="right" width="40" class="pink">2</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="red">6</td>
+        <td align="center" colspan="16">1人分の空きスペース</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="blue">外</td>
+        <td style="width:3em" class="blue">1～20</td>
+        <td align="center" colspan="16">20人分のデータ</td>
+      </tr>
+      <tr>
+        <td style="width:3em" class="blue">21～26</td>
+        <td align="center" colspan="16">6人分の空きスペース</td>
+      </tr>
+    </table>
+  </div>
+  <p>
+    バグレベルアップの本質は、
+  </p>
+    <div class="frame">
+      本来ならば<a href="05saikanyu.html">再加入メンバーの成長</a>として処理されるはずなのに、セーブの過程の中で外したときのお供レベルが失われてしまうので、現在のお供レベルが分だけそのまま成長してしまう<br>
+    </div>
+  <p>
+    というものです。また、<br>
+  </p>
+    <div class="frame" width>
+      パーティー外メンバーのスペースに22番目以降に入ったキャラがバグレベルアップの対象となる<br>
+    </div>
+  <p>
+    ことがわかります。<br>
+    次のページで、もう少しまとめてみましょう。<br>
+  </p>
+<div class="footmap">
+  [ <a href="06shinki.html">前へ</a> ][ <a href="08buglvup2.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
+</div>
+</div>
+</article>
+
+<script src="../footer.js"></script>
+
+</body>
+</html>

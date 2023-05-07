@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>キャラクター初期設定1 - ロマサガ3のアイテムのページ</title>
+  <link rel="stylesheet" type="text/css" href="../rs3i.css">
+</head>
+
+<body>
+<script src="../header.js"></script>
+
+<article>
+<div class="d1" id="data">
+  <h1>キャラクター初期設定1</h1>
+  <p class="noindent">ROM解析で得られたキャラクター初期設定です。<br>性別、基本能力値、宿星、得意武器、得意術、所有陣形をカバーしています。</p>
+  <ul class="noindent">
+    <li><a href="#type1">ROMデータ準拠版</a></li>
+    <li><a href="#type2">まにあっくガイド準拠版</a></li>
+  </ul>
+  <dl>
+    <dt>性別について</dt>
+    <dd>男、女、両性、性別なしの4つの性があります。</dd>
+    <dd>両性のキャラ（ようせい）は、男性・女性両方のモンスターから誘惑され、女性特効の技でクリティカルヒットしてしまいます。しかし、羅刹のベルト・シルティークのどちらを装備しても魅力が半減しません。</dd>
+    <dd>性別なしのキャラ（ボストン・ゆきだるま）は、イビルウィスパーを除いてモンスターからの誘惑を受け付けません。しかし、羅刹のベルト、シルティークを装備すると魅力が半減します。</dd>
+    <dt>基本能力値について</dt>
+    <dd>ここにある腕力～魅力の各能力値は、<strong>宿星・得意武器による修正を加味しない</strong>基本能力値です。<br>宿星・得意武器のボーナス値は下にあります。これで主人公選択や主人公変更での各能力値が計算できます。</dd>
+    <ul>
+      <li>ROMデータ準拠版：基本能力値はROM上のデータをそのまま使っています。<br>宿星・得意武器のボーナス値は、螢惑・鎮星を修正しましたが、他は基礎知識編（NTT出版）のものと同じです。</li>
+      <li>まにあっくガイド準拠版：最小値を取る宿星・武器のボーナス値を0として、残りのボーナス値を計算しています。<a href="http://www.ceres.dti.ne.jp/~lelyio/">「中立同盟」</a>の「まにあっくガイド」と同じ計算法です。<br>それに合わせて、基本能力値も調整してあります。引き算が含まれないため、こちらの方が楽に計算できます。</li>
+    </ul>
+    <dt>宿星・得意武器について</dt>
+    <dd>初期設定での宿星・得意武器です。<br>
+        これに対応するボーナス値を足せば初期設定での各能力値が求められますが、いちいち計算するよりも、<a href="http://homepage1.nifty.com/di2/">「ロマサガ3のモンスターのページ」</a>の「豆知識」にあるキャラクターデータを参考にされた方が良いでしょう。各能力値のランキングまで付いています。</dd>
+    <dt>得意術について</dt>
+    <dd>得意術は得意武器をなしにしたとき使える術です。同じような設定がサブキャラにあったので、それも載せています。<br>
+        得意術によって術の威力が変化するようなことは確認されていません。</dd>
+    <dt>所有陣形について</dt>
+    <dd>各キャラクターが持っている陣形です。<br>
+        陣形を習得するには、メニューの陣形画面で該当陣形を表示させなくてはなりません。つまり、陣形に必要なパーティー人数を揃えて陣形画面を開く必要があります。これを忘れると陣形を習得できません。</dd>
+  </dl>
+  <h3 id="type1">ROMデータ準拠版</h3>
+  <div align="center">
+    <table>
+      <tr>
+        <th width="104">キャラクター名</th>
+        <th>性別</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+        <th>宿星</th>
+        <th>得意武器</th>
+        <th>得意術</th>
+        <th width="130">所有陣形</th>
+      </tr>
+      <tr>
+        <td width="104">ユリアン</td>
+        <td align="center">男</td>
+        <td align="right">19</td>
+        <td align="right">17</td>
+        <td align="right">15</td>
+        <td align="right">16</td>
+        <td align="right">15</td>
+        <td align="right">23</td>
+        <td align="right">12</td>
+        <td align="center">歳星</td>
+        <td align="center">剣</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130"> ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">エレン</td>
+        <td align="center">女</td>
+        <td align="right">16</td>
+        <td align="right">18</td>
+        <td align="right">20</td>
+        <td align="right">12</td>
+        <td align="right">17</td>
+        <td align="right">16</td>
+        <td align="right">22</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">サラ</td>
+        <td align="center">女</td>
+        <td align="right">18</td>
+        <td align="right">16</td>
+        <td align="right">19</td>
+        <td align="right">15</td>
+        <td align="right">21</td>
+        <td align="right">11</td>
+        <td align="right">19</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">トーマス</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">14</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">22</td>
+        <td align="right">16</td>
+        <td align="right">19</td>
+        <td align="center">辰星</td>
+        <td align="center">槍</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">ハリード</td>
+        <td align="center">男</td>
+        <td align="right">19</td>
+        <td align="right">14</td>
+        <td align="right">21</td>
+        <td align="right">15</td>
+        <td align="right">16</td>
+        <td align="right">18</td>
+        <td align="right">19</td>
+        <td align="center">太白</td>
+        <td align="center">剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">デザートランス</td>
+      </tr>
+      <tr>
+        <td width="104">ミカエル</td>
+        <td align="center">男</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">19</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="right">21</td>
+        <td align="right">17</td>
+        <td align="center">鎮星</td>
+        <td align="center">小剣</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">虎穴陣</td>
+      </tr>
+      <tr>
+        <td width="104">モニカ</td>
+        <td align="center">女</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="right">18</td>
+        <td align="right">18</td>
+        <td align="right">13</td>
+        <td align="right">17</td>
+        <td align="right">21</td>
+        <td align="center">螢惑</td>
+        <td align="center">小剣</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">カタリナ</td>
+        <td align="center">女</td>
+        <td align="right">16</td>
+        <td align="right">20</td>
+        <td align="right">24</td>
+        <td align="right">15</td>
+        <td align="right">12</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="center">辰星</td>
+        <td align="center">大剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">レオニード</td>
+        <td align="center">男</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">22</td>
+        <td align="right">14</td>
+        <td align="right">27</td>
+        <td align="right">13</td>
+        <td align="right">26</td>
+        <td align="center">鎮星</td>
+        <td align="center">素手</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">少年</td>
+        <td align="center">男</td>
+        <td align="right">21</td>
+        <td align="right">16</td>
+        <td align="right">20</td>
+        <td align="right">14</td>
+        <td align="right">17</td>
+        <td align="right">11</td>
+        <td align="right">16</td>
+        <td align="center">鎮星</td>
+        <td align="center">大剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">スペキュレイション</td>
+      </tr>
+      <tr>
+        <td width="104">ティベリウス</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">13</td>
+        <td align="right">13</td>
+        <td align="right">18</td>
+        <td align="right">20</td>
+        <td align="right">20</td>
+        <td align="right">14</td>
+        <td align="center">螢惑</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">ウォード</td>
+        <td align="center">男</td>
+        <td align="right">19</td>
+        <td align="right">19</td>
+        <td align="right">13</td>
+        <td align="right">19</td>
+        <td align="right">13</td>
+        <td align="right">16</td>
+        <td align="right">14</td>
+        <td align="center">太白</td>
+        <td align="center">大剣</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">ポール</td>
+        <td align="center">男</td>
+        <td align="right">19</td>
+        <td align="right">16</td>
+        <td align="right">15</td>
+        <td align="right">21</td>
+        <td align="right">14</td>
+        <td align="right">15</td>
+        <td align="right">14</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（細）</td>
+        <td align="center">男</td>
+        <td align="right">22</td>
+        <td align="right">14</td>
+        <td align="right">17</td>
+        <td align="right">15</td>
+        <td align="right">18</td>
+        <td align="right">15</td>
+        <td align="right">14</td>
+        <td align="center">辰星</td>
+        <td align="center">小剣</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">トライアンカー</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（太）</td>
+        <td align="center">男</td>
+        <td align="right">18</td>
+        <td align="right">15</td>
+        <td align="right">20</td>
+        <td align="right">21</td>
+        <td align="right">11</td>
+        <td align="right">15</td>
+        <td align="right">16</td>
+        <td align="center">螢惑</td>
+        <td align="center">小剣</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">トライアンカー</td>
+      </tr>
+      <tr>
+        <td width="104">ミューズ</td>
+        <td align="center">女</td>
+        <td align="right">20</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="right">15</td>
+        <td align="right">14</td>
+        <td align="right">16</td>
+        <td align="right">22</td>
+        <td align="center">螢惑</td>
+        <td align="center">なし</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">シャール</td>
+        <td align="center">男</td>
+        <td align="right">2</td>
+        <td align="right">5</td>
+        <td align="right">17</td>
+        <td align="right">20</td>
+        <td align="right">19</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="center">鎮星</td>
+        <td align="center">槍</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">詩人</td>
+        <td align="center">男</td>
+        <td align="right">19</td>
+        <td align="right">17</td>
+        <td align="right">15</td>
+        <td align="right">16</td>
+        <td align="right">14</td>
+        <td align="right">17</td>
+        <td align="right">22</td>
+        <td align="center">辰星</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">タチアナ</td>
+        <td align="center">女</td>
+        <td align="right">18</td>
+        <td align="right">16</td>
+        <td align="right">15</td>
+        <td align="right">21</td>
+        <td align="right">16</td>
+        <td align="right">13</td>
+        <td align="right">16</td>
+        <td align="center">鎮星</td>
+        <td align="center">小剣</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">フリーファイト</td>
+      </tr>
+      <tr>
+        <td width="104">ヤン
+        ファン</td>
+        <td align="center">男</td>
+        <td align="right">13</td>
+        <td align="right">13</td>
+        <td align="right">21</td>
+        <td align="right">14</td>
+        <td align="right">19</td>
+        <td align="right">21</td>
+        <td align="right">16</td>
+        <td align="center">歳星</td>
+        <td align="center">なし</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">玄武陣</td>
+      </tr>
+      <tr>
+        <td width="104">ウンディーネ</td>
+        <td align="center">女</td>
+        <td align="right">12</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="right">23</td>
+        <td align="right">18</td>
+        <td align="right">10</td>
+        <td align="center">辰星</td>
+        <td align="center">なし</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">ツィー
+        リン</td>
+        <td align="center">女</td>
+        <td align="right">15</td>
+        <td align="right">21</td>
+        <td align="right">13</td>
+        <td align="right">20</td>
+        <td align="right">11</td>
+        <td align="right">20</td>
+        <td align="right">14</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">ハーマン</td>
+        <td align="center">男</td>
+        <td align="right">9</td>
+        <td align="right">24</td>
+        <td align="right">12</td>
+        <td align="right">8</td>
+        <td align="right">18</td>
+        <td align="right">22</td>
+        <td align="right">14</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">龍陣</td>
+      </tr>
+      <tr>
+        <td width="104">フルブライト</td>
+        <td align="center">男</td>
+        <td align="right">16</td>
+        <td align="right">19</td>
+        <td align="right">20</td>
+        <td align="right">16</td>
+        <td align="right">16</td>
+        <td align="right">19</td>
+        <td align="right">10</td>
+        <td align="center">鎮星</td>
+        <td align="center">なし</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">バイ
+        メイニャン</td>
+        <td align="center">女</td>
+        <td align="right">21</td>
+        <td align="right">13</td>
+        <td align="right">16</td>
+        <td align="right">22</td>
+        <td align="right">18</td>
+        <td align="right">16</td>
+        <td align="right">5</td>
+        <td align="center">螢惑</td>
+        <td align="center">なし</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">ノーラ</td>
+        <td align="center">女</td>
+        <td align="right">23</td>
+        <td align="right">25</td>
+        <td align="right">13</td>
+        <td align="right">14</td>
+        <td align="right">12</td>
+        <td align="right">15</td>
+        <td align="right">13</td>
+        <td align="center">歳星</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">虎穴陣</td>
+      </tr>
+      <tr>
+        <td width="104">ブラック</td>
+        <td align="center">男</td>
+        <td align="right">14</td>
+        <td align="right">24</td>
+        <td align="right">17</td>
+        <td align="right">13</td>
+        <td align="right">18</td>
+        <td align="right">22</td>
+        <td align="right">16</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">龍陣</td>
+      </tr>
+      <tr>
+        <td width="104">ようせい</td>
+        <td align="center">両</td>
+        <td align="right">17</td>
+        <td align="right">25</td>
+        <td align="right">25</td>
+        <td align="right">7</td>
+        <td align="right">13</td>
+        <td align="right">11</td>
+        <td align="right">21</td>
+        <td align="center">太白</td>
+        <td align="center">槍</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">スペキュレイション</td>
+      </tr>
+      <tr>
+        <td width="104">ボストン</td>
+        <td align="center">無</td>
+        <td align="right">14</td>
+        <td align="right">14</td>
+        <td align="right">18</td>
+        <td align="right">15</td>
+        <td align="right">25</td>
+        <td align="right">20</td>
+        <td align="right">9</td>
+        <td align="center">辰星</td>
+        <td align="center">素手</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">玄武陣</td>
+      </tr>
+      <tr>
+        <td width="104">ぞう</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">19</td>
+        <td align="right">7</td>
+        <td align="right">21</td>
+        <td align="right">21</td>
+        <td align="right">20</td>
+        <td align="right">14</td>
+        <td align="center">太白</td>
+        <td align="center">素手</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">ゆきだるま</td>
+        <td align="center">無</td>
+        <td align="right">13</td>
+        <td align="right">13</td>
+        <td align="right">9</td>
+        <td align="right">26</td>
+        <td align="right">13</td>
+        <td align="right">24</td>
+        <td align="right">15</td>
+        <td align="center">辰星</td>
+        <td align="center">なし</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+    </table>
+    <table>
+      <caption>宿星ボーナス</caption>
+      <tr>
+        <th>宿星</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+      </tr>
+      <tr>
+        <td>歳星</td>
+        <td align="right">-1</td>
+        <td align="right">0</td>
+        <td align="right">+2</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+      </tr>
+      <tr>
+        <td>螢惑</td>
+        <td align="right">-2</td>
+        <td align="right">+1</td>
+        <td align="right">0</td>
+        <td align="right">-2</td>
+        <td align="right">+2</td>
+        <td align="right">+1</td>
+        <td align="right">+1</td>
+      </tr>
+      <tr>
+        <td>鎮星</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">-2</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">+1</td>
+        <td align="right">+2</td>
+      </tr>
+      <tr>
+        <td>太白</td>
+        <td align="right">+2</td>
+        <td align="right">-2</td>
+        <td align="right">-1</td>
+        <td align="right">+2</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td>辰星</td>
+        <td align="right">0</td>
+        <td align="right">+2</td>
+        <td align="right">+1</td>
+        <td align="right">+1</td>
+        <td align="right">-2</td>
+        <td align="right">-2</td>
+        <td align="right">+1</td>
+      </tr>
+    </table>
+    <table>
+      <caption>得意武器ボーナス</caption>
+      <tr>
+        <th>武器</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+      </tr>
+      <tr>
+        <td>剣</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">+1</td>
+      </tr>
+      <tr>
+        <td>大剣</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">-2</td>
+        <td align="right">+2</td>
+        <td align="right">0</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+      </tr>
+      <tr>
+        <td>斧</td>
+        <td align="right">+3</td>
+        <td align="right">-2</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">-2</td>
+      </tr>
+      <tr>
+        <td>棍棒</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">-1</td>
+      </tr>
+      <tr>
+        <td>小剣</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">+2</td>
+        <td align="right">-2</td>
+        <td align="right">+1</td>
+        <td align="right">-1</td>
+        <td align="right">+2</td>
+      </tr>
+      <tr>
+        <td>槍</td>
+        <td align="right">+2</td>
+        <td align="right">-1</td>
+        <td align="right">+1</td>
+        <td align="right">+1</td>
+        <td align="right">0</td>
+        <td align="right">-1</td>
+        <td align="right">-1</td>
+      </tr>
+      <tr>
+        <td>弓</td>
+        <td align="right">0</td>
+        <td align="right">+3</td>
+        <td align="right">0</td>
+        <td align="right">-1</td>
+        <td align="right">-2</td>
+        <td align="right">+1</td>
+        <td align="right">+1</td>
+      </tr>
+      <tr>
+        <td>素手</td>
+        <td align="right">+2</td>
+        <td align="right">-3</td>
+        <td align="right">+1</td>
+        <td align="right">+3</td>
+        <td align="right">-2</td>
+        <td align="right">-1</td>
+        <td align="right">-1</td>
+      </tr>
+      <tr>
+        <td>なし</td>
+        <td align="right">-2</td>
+        <td align="right">+2</td>
+        <td align="right">-2</td>
+        <td align="right">-3</td>
+        <td align="right">+3</td>
+        <td align="right">+1</td>
+        <td align="right">+2</td>
+      </tr>
+    </table>
+  </div>
+  <h3 id="type2">まにあっくガイド準拠版</h3>
+  <div align="center">
+    <table>
+      <tr>
+        <th width="104">キャラクター名</th>
+        <th>性別</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+        <th>宿星</th>
+        <th>得意武器</th>
+        <th>得意術</th>
+        <th width="130">所有陣形</th>
+      </tr>
+      <tr>
+        <td width="104">ユリアン</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">12</td>
+        <td align="right">11</td>
+        <td align="right">11</td>
+        <td align="right">11</td>
+        <td align="right">20</td>
+        <td align="right">10</td>
+        <td align="center">歳星</td>
+        <td align="center">剣</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">エレン</td>
+        <td align="center">女</td>
+        <td align="right">12</td>
+        <td align="right">13</td>
+        <td align="right">16</td>
+        <td align="right">7</td>
+        <td align="right">13</td>
+        <td align="right">13</td>
+        <td align="right">20</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">サラ</td>
+        <td align="center">女</td>
+        <td align="right">14</td>
+        <td align="right">11</td>
+        <td align="right">15</td>
+        <td align="right">10</td>
+        <td align="right">17</td>
+        <td align="right">8</td>
+        <td align="right">17</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">トーマス</td>
+        <td align="center">男</td>
+        <td align="right">11</td>
+        <td align="right">9</td>
+        <td align="right">12</td>
+        <td align="right">12</td>
+        <td align="right">18</td>
+        <td align="right">13</td>
+        <td align="right">17</td>
+        <td align="center">辰星</td>
+        <td align="center">槍</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">ハリード</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">9</td>
+        <td align="right">17</td>
+        <td align="right">10</td>
+        <td align="right">12</td>
+        <td align="right">15</td>
+        <td align="right">17</td>
+        <td align="center">太白</td>
+        <td align="center">剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">デザートランス</td>
+      </tr>
+      <tr>
+        <td width="104">ミカエル</td>
+        <td align="center">男</td>
+        <td align="right">12</td>
+        <td align="right">12</td>
+        <td align="right">15</td>
+        <td align="right">12</td>
+        <td align="right">13</td>
+        <td align="right">18</td>
+        <td align="right">15</td>
+        <td align="center">鎮星</td>
+        <td align="center">小剣</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">虎穴陣</td>
+      </tr>
+      <tr>
+        <td width="104">モニカ</td>
+        <td align="center">女</td>
+        <td align="right">13</td>
+        <td align="right">12</td>
+        <td align="right">14</td>
+        <td align="right">13</td>
+        <td align="right">9</td>
+        <td align="right">14</td>
+        <td align="right">19</td>
+        <td align="center">螢惑</td>
+        <td align="center">小剣</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">カタリナ</td>
+        <td align="center">女</td>
+        <td align="right">12</td>
+        <td align="right">15</td>
+        <td align="right">20</td>
+        <td align="right">10</td>
+        <td align="right">8</td>
+        <td align="right">14</td>
+        <td align="right">15</td>
+        <td align="center">辰星</td>
+        <td align="center">大剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">ワールウインド</td>
+      </tr>
+      <tr>
+        <td width="104">レオニード</td>
+        <td align="center">男</td>
+        <td align="right">12</td>
+        <td align="right">12</td>
+        <td align="right">18</td>
+        <td align="right">9</td>
+        <td align="right">23</td>
+        <td align="right">10</td>
+        <td align="right">24</td>
+        <td align="center">鎮星</td>
+        <td align="center">素手</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">少年</td>
+        <td align="center">男</td>
+        <td align="right">17</td>
+        <td align="right">11</td>
+        <td align="right">16</td>
+        <td align="right">9</td>
+        <td align="right">13</td>
+        <td align="right">8</td>
+        <td align="right">14</td>
+        <td align="center">鎮星</td>
+        <td align="center">大剣</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">スペキュレイション</td>
+      </tr>
+      <tr>
+        <td width="104">ティベリウス</td>
+        <td align="center">男</td>
+        <td align="right">11</td>
+        <td align="right">8</td>
+        <td align="right">9</td>
+        <td align="right">13</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">12</td>
+        <td align="center">螢惑</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">ウォード</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">14</td>
+        <td align="right">9</td>
+        <td align="right">14</td>
+        <td align="right">9</td>
+        <td align="right">13</td>
+        <td align="right">12</td>
+        <td align="center">太白</td>
+        <td align="center">大剣</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">ポール</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">11</td>
+        <td align="right">11</td>
+        <td align="right">16</td>
+        <td align="right">10</td>
+        <td align="right">12</td>
+        <td align="right">12</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（細）</td>
+        <td align="center">男</td>
+        <td align="right">18</td>
+        <td align="right">9</td>
+        <td align="right">13</td>
+        <td align="right">10</td>
+        <td align="right">14</td>
+        <td align="right">12</td>
+        <td align="right">12</td>
+        <td align="center">辰星</td>
+        <td align="center">小剣</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">トライアンカー</td>
+      </tr>
+      <tr>
+        <td width="104">ロビン（太）</td>
+        <td align="center">男</td>
+        <td align="right">14</td>
+        <td align="right">10</td>
+        <td align="right">16</td>
+        <td align="right">16</td>
+        <td align="right">7</td>
+        <td align="right">12</td>
+        <td align="right">14</td>
+        <td align="center">螢惑</td>
+        <td align="center">小剣</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">トライアンカー</td>
+      </tr>
+      <tr>
+        <td width="104">ミューズ</td>
+        <td align="center">女</td>
+        <td align="right">16</td>
+        <td align="right">12</td>
+        <td align="right">13</td>
+        <td align="right">10</td>
+        <td align="right">10</td>
+        <td align="right">13</td>
+        <td align="right">20</td>
+        <td align="center">螢惑</td>
+        <td align="center">なし</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">シャール</td>
+        <td align="center">男</td>
+        <td align="right">-2</td>
+        <td align="right">0</td>
+        <td align="right">13</td>
+        <td align="right">15</td>
+        <td align="right">15</td>
+        <td align="right">13</td>
+        <td align="right">15</td>
+        <td align="center">鎮星</td>
+        <td align="center">槍</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">詩人</td>
+        <td align="center">男</td>
+        <td align="right">15</td>
+        <td align="right">12</td>
+        <td align="right">11</td>
+        <td align="right">11</td>
+        <td align="right">10</td>
+        <td align="right">14</td>
+        <td align="right">20</td>
+        <td align="center">辰星</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">タチアナ</td>
+        <td align="center">女</td>
+        <td align="right">14</td>
+        <td align="right">11</td>
+        <td align="right">11</td>
+        <td align="right">16</td>
+        <td align="right">12</td>
+        <td align="right">10</td>
+        <td align="right">14</td>
+        <td align="center">鎮星</td>
+        <td align="center">小剣</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+      <tr>
+        <td width="104">ヤン
+        ファン</td>
+        <td align="center">男</td>
+        <td align="right">9</td>
+        <td align="right">8</td>
+        <td align="right">17</td>
+        <td align="right">9</td>
+        <td align="right">15</td>
+        <td align="right">18</td>
+        <td align="right">14</td>
+        <td align="center">歳星</td>
+        <td align="center">なし</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">玄武陣</td>
+      </tr>
+      <tr>
+        <td width="104">ウンディーネ</td>
+        <td align="center">女</td>
+        <td align="right">8</td>
+        <td align="right">11</td>
+        <td align="right">13</td>
+        <td align="right">11</td>
+        <td align="right">19</td>
+        <td align="right">15</td>
+        <td align="right">8</td>
+        <td align="center">辰星</td>
+        <td align="center">なし</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">ツィー
+        リン</td>
+        <td align="center">女</td>
+        <td align="right">11</td>
+        <td align="right">16</td>
+        <td align="right">9</td>
+        <td align="right">15</td>
+        <td align="right">7</td>
+        <td align="right">17</td>
+        <td align="right">12</td>
+        <td align="center">歳星</td>
+        <td align="center">弓</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">ハンターシフト</td>
+      </tr>
+      <tr>
+        <td width="104">ハーマン</td>
+        <td align="center">男</td>
+        <td align="right">5</td>
+        <td align="right">19</td>
+        <td align="right">8</td>
+        <td align="right">3</td>
+        <td align="right">14</td>
+        <td align="right">19</td>
+        <td align="right">12</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">龍陣</td>
+      </tr>
+      <tr>
+        <td width="104">フルブライト</td>
+        <td align="center">男</td>
+        <td align="right">12</td>
+        <td align="right">14</td>
+        <td align="right">16</td>
+        <td align="right">11</td>
+        <td align="right">12</td>
+        <td align="right">16</td>
+        <td align="right">8</td>
+        <td align="center">鎮星</td>
+        <td align="center">なし</td>
+        <td align="center">太陽</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">バイ
+        メイニャン</td>
+        <td align="center">女</td>
+        <td align="right">17</td>
+        <td align="right">8</td>
+        <td align="right">12</td>
+        <td align="right">17</td>
+        <td align="right">14</td>
+        <td align="right">13</td>
+        <td align="right">3</td>
+        <td align="center">螢惑</td>
+        <td align="center">なし</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">パワーレイズ</td>
+      </tr>
+      <tr>
+        <td width="104">ノーラ</td>
+        <td align="center">女</td>
+        <td align="right">19</td>
+        <td align="right">20</td>
+        <td align="right">9</td>
+        <td align="right">9</td>
+        <td align="right">8</td>
+        <td align="right">12</td>
+        <td align="right">11</td>
+        <td align="center">歳星</td>
+        <td align="center">棍棒</td>
+        <td align="center">白虎</td>
+        <td align="center" width="130">虎穴陣</td>
+      </tr>
+      <tr>
+        <td width="104">ブラック</td>
+        <td align="center">男</td>
+        <td align="right">10</td>
+        <td align="right">19</td>
+        <td align="right">13</td>
+        <td align="right">8</td>
+        <td align="right">14</td>
+        <td align="right">19</td>
+        <td align="right">14</td>
+        <td align="center">太白</td>
+        <td align="center">斧</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">龍陣</td>
+      </tr>
+      <tr>
+        <td width="104">ようせい</td>
+        <td align="center">両</td>
+        <td align="right">13</td>
+        <td align="right">20</td>
+        <td align="right">21</td>
+        <td align="right">2</td>
+        <td align="right">9</td>
+        <td align="right">8</td>
+        <td align="right">19</td>
+        <td align="center">太白</td>
+        <td align="center">槍</td>
+        <td align="center">朱鳥</td>
+        <td align="center" width="130">スペキュレイション</td>
+      </tr>
+      <tr>
+        <td width="104">ボストン</td>
+        <td align="center">無</td>
+        <td align="right">10</td>
+        <td align="right">9</td>
+        <td align="right">14</td>
+        <td align="right">10</td>
+        <td align="right">21</td>
+        <td align="right">17</td>
+        <td align="right">7</td>
+        <td align="center">辰星</td>
+        <td align="center">素手</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">玄武陣</td>
+      </tr>
+      <tr>
+        <td width="104">ぞう</td>
+        <td align="center">男</td>
+        <td align="right">11</td>
+        <td align="right">14</td>
+        <td align="right">3</td>
+        <td align="right">16</td>
+        <td align="right">17</td>
+        <td align="right">17</td>
+        <td align="right">12</td>
+        <td align="center">太白</td>
+        <td align="center">素手</td>
+        <td align="center">蒼龍</td>
+        <td align="center" width="130">鳳天舞の陣</td>
+      </tr>
+      <tr>
+        <td width="104">ゆきだるま</td>
+        <td align="center">無</td>
+        <td align="right">9</td>
+        <td align="right">8</td>
+        <td align="right">5</td>
+        <td align="right">21</td>
+        <td align="right">9</td>
+        <td align="right">21</td>
+        <td align="right">13</td>
+        <td align="center">辰星</td>
+        <td align="center">なし</td>
+        <td align="center">玄武</td>
+        <td align="center" width="130">なし</td>
+      </tr>
+    </table>
+    <table>
+      <caption>宿星ボーナス</caption>
+      <tr>
+        <th>宿星</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+      </tr>
+      <tr>
+        <td>歳星</td>
+        <td align="right">1</td>
+        <td align="right">2</td>
+        <td align="right">4</td>
+        <td align="right">1</td>
+        <td align="right">3</td>
+        <td align="right">1</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>螢惑</td>
+        <td align="right">0</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">0</td>
+        <td align="right">4</td>
+        <td align="right">3</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>鎮星</td>
+        <td align="right">3</td>
+        <td align="right">1</td>
+        <td align="right">0</td>
+        <td align="right">2</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td>太白</td>
+        <td align="right">4</td>
+        <td align="right">0</td>
+        <td align="right">1</td>
+        <td align="right">4</td>
+        <td align="right">1</td>
+        <td align="right">3</td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td>辰星</td>
+        <td align="right">2</td>
+        <td align="right">4</td>
+        <td align="right">3</td>
+        <td align="right">3</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">1</td>
+      </tr>
+    </table>
+    <table>
+      <caption>得意武器ボーナス</caption>
+      <tr>
+        <th>武器</th>
+        <th>腕力</th>
+        <th>器用</th>
+        <th>素早</th>
+        <th>体力</th>
+        <th>魔力</th>
+        <th>意志</th>
+        <th>魅力</th>
+      </tr>
+      <tr>
+        <td>剣</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">1</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td>大剣</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">0</td>
+        <td align="right">5</td>
+        <td align="right">2</td>
+        <td align="right">2</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>斧</td>
+        <td align="right">5</td>
+        <td align="right">1</td>
+        <td align="right">1</td>
+        <td align="right">4</td>
+        <td align="right">1</td>
+        <td align="right">2</td>
+        <td align="right">0</td>
+      </tr>
+      <tr>
+        <td>棍棒</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">0</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>小剣</td>
+        <td align="right">1</td>
+        <td align="right">4</td>
+        <td align="right">4</td>
+        <td align="right">1</td>
+        <td align="right">3</td>
+        <td align="right">0</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td>槍</td>
+        <td align="right">4</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+        <td align="right">4</td>
+        <td align="right">2</td>
+        <td align="right">0</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>弓</td>
+        <td align="right">2</td>
+        <td align="right">6</td>
+        <td align="right">2</td>
+        <td align="right">2</td>
+        <td align="right">0</td>
+        <td align="right">2</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td>素手</td>
+        <td align="right">4</td>
+        <td align="right">0</td>
+        <td align="right">3</td>
+        <td align="right">6</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td>なし</td>
+        <td align="right">0</td>
+        <td align="right">5</td>
+        <td align="right">0</td>
+        <td align="right">0</td>
+        <td align="right">5</td>
+        <td align="right">2</td>
+        <td align="right">4</td>
+      </tr>
+    </table>
+  </div>
+<div class="footmap">
+  [ <a href="03default2.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
+</div>
+</div>
+</article>
+
+<script src="../footer.js"></script>
+
+</body>
+</html>
