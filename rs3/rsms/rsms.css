@@ -1,0 +1,87 @@
+body
+{
+	font-size       : 1em;
+	font-family		: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+	text-align      : center;
+}
+
+div.data
+{
+	text-align			: left;
+	background-color	: #ffffff;
+	margin          : 0px;
+	padding			: 0.2em;
+	max-width       : 800px;
+	text-align      : left;
+}
+
+@media screen and (max-width: 1100px) {
+	div.data {
+	  max-width       : 100%;
+	}
+}
+
+h3
+{
+	border-bottom	: 1px solid #509f00;
+	border-left		: 5px solid #509f00;
+}
+
+h4
+{
+	border-left		: 3px solid #509f00;
+	margin			: 1em 0.5em 0.25em 0em;
+	padding			: 0.15em;
+}
+
+
+table
+{
+	border-collapse : collapse;
+	margin: auto;
+}
+
+th
+{
+	border				: 1px solid #509f00;
+	background-color	: #9dc941;
+	font-size       : 0.8em;
+}
+
+td
+{
+	border				: 1px solid #9dc941;
+	background-color	: #ffffff;
+	font-size       : 0.8em;
+}
+
+td.TRANS
+{
+	border				: 1px solid #9dc941;
+	background-color	: #aeda63;
+	font-size       : 0.8em;
+}
+
+
+P
+{
+	margin-left	: 1em;
+}
+
+ul
+{
+	margin-top		: 1em;
+	margin-bottom	: 1em;
+}
+
+ol
+{
+	margin-top		: 1em;
+	margin-bottom	: 1em;
+}
+
+li
+{
+	margin-bottom	: 0.5em;
+}
+

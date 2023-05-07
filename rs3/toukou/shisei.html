@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>施政システム解析 - ロマサガ3のアイテムのページ</title>
+  <link rel="stylesheet" type="text/css" href="../rs3i.css">
+</head>
+
+<body>
+<script src="../header.js"></script>
+
+<article>
+<div class="d1" id="data">
+  <h1>施政システム解析</h1>
+  <div align="right">執筆: 不如帰さん</div>
+  <a name="01"></a><h3>初期値</h3>
+  <table>
+    <tr>
+      <th>住民</th><td>100（普通）</td>
+    </tr>
+    <tr>
+      <th>産業</th><td>80（不足）</td>
+    </tr>
+    <tr>
+      <th>国威</th><td>100（普通）</td>
+    </tr>
+    <tr>
+      <th>国庫</th><td>99万オーラム（実際は100万オーラムちょうど）</td>
+    </tr>
+  </table>
+  <h3>数値とランク</h3>
+  <table>
+  <tr>
+    <th><br></th>
+    <th>住民</th>
+    <th>産業</th>
+    <th>国威</th>
+  </tr>
+  <tr>
+    <td>255</td>
+    <td>最高</td>
+    <td>完全</td>
+    <td>最高</td>
+  </tr>
+  <tr>
+    <td>200〜254</td>
+    <td>幸福</td>
+    <td>強力</td>
+    <td>強大</td>
+  </tr>
+  <tr>
+    <td>150〜199</td>
+    <td>満足</td>
+    <td>充実</td>
+    <td>充実</td>
+  </tr>
+  <tr>
+    <td>100〜149</td>
+    <td>普通</td>
+    <td>普通</td>
+    <td>普通</td>
+  </tr>
+  <tr>
+    <td>50〜 99</td>
+    <td>不満</td>
+    <td>不足</td>
+    <td>不足</td>
+  </tr>
+  <tr>
+    <td>1〜 49</td>
+    <td>不幸</td>
+    <td>弱体</td>
+    <td>弱小</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>最悪</td>
+    <td>皆無</td>
+    <td>皆無</td>
+  </tr>
+  </table>
+  <p>※ゲーム中では、産業の｢弱体｣・｢皆無｣及び国威の｢不足｣・｢弱小｣・｢皆無｣が表示されることは無い。</p>
+  <h3>政策効果</h3>
+  <p>社会政策は住民が、産業政策の場合は産業の数値が下表のように上昇する。<br>
+  ただし産業政策の場合は、費用に関係なく住民も 6 上昇する。</p>
+  <table>
+    <tr>
+      <td class="trans">激安 (15万)</td>
+      <td class="trans">：+</td>
+      <td class="trans" align="right">12</td>
+    </tr>
+    <tr>
+      <td class="trans">安い (30万)</td>
+      <td class="trans">：+</td>
+      <td class="trans" align="right">22</td>
+    </tr>
+    <tr>
+      <td class="trans">普通 (60万)</td>
+      <td class="trans">：+</td>
+      <td class="trans" align="right">45</td>
+    </tr>
+    <tr>
+      <td class="trans">高い (120万)</td>
+      <td class="trans">：+</td>
+      <td class="trans" align="right">91</td>
+    </tr>
+    <tr>
+      <td class="trans">バカ高(240万)</td>
+      <td class="trans">：+</td>
+      <td class="trans" align="right">160</td>
+    </tr>
+  </table>
+  <h3>外交効果</h3>
+  <p>勢力の大きさや費用に関係無く、国威+8</p>
+  <h3>マスコンバット勝利による国威の上昇値</h3>
+  <table>
+    <tr>
+      <th>対戦相手</th>
+      <th align="right">国威</th>
+      <th>備考</th>
+    </tr>
+    <tr>
+      <td>エドウィン</td>
+      <td align="right">+10</td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td>パッペンハイム</td>
+      <td align="right">+10</td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td>大演習</td>
+      <td align="right">+10</td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td>野盗</td>
+      <td align="right">+15</td>
+      <td>1戦勝利につき+
+      5</td>
+    </tr>
+    <tr>
+      <td>リブロフ軍団</td>
+      <td align="right">+30</td>
+      <td>1戦勝利につき+10</td>
+    </tr>
+    <tr>
+      <td>神王教団</td>
+      <td align="right">+30</td>
+      <td>1戦勝利につき+10　全戦勝利で国庫+50万</td>
+    </tr>
+    <tr>
+      <td>ビューネイ</td>
+      <td align="right">+10</td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td>最後の抵抗</td>
+      <td align="right">+20</td>
+      <td>　</td>
+    </tr>
+  </table>
+  <ul>
+    <li>上表は、<strong>勝利することによって得られる国威上昇値のみ</strong>を記載（３連戦のマスコンは、３戦全て勝利した場合のもの）。</li>
+    <li>マスコンに負けたり、戦わなかったりしても国威及び住民、産業が下がることはない。</li>
+    <li>マスコン勝利によって上昇するのは基本的に国威のみ（神王教団戦のみ全戦勝利で国庫+50万）。</li>
+    <li>生き残り勝負による勝利も敵軍全滅による勝利も国威の上昇値は同じ。</li>
+    <li>どのマスコンも、出撃するだけで国威+1。</li>
+  </ul>
+  <p>よって、例えば野盗戦の場合、マスコンの戦闘結果によって国威上昇値は最終的に次のように変化する。</p>
+  <table>
+    <tr>
+      <td class="trans">10万で話をつける</td>
+      <td class="trans">…国威変化なし　国庫-10万</td>
+    </tr>
+    <tr>
+      <td class="trans">出撃＆初戦敗退</td>
+      <td class="trans">…国威+1</td>
+    </tr>
+    <tr>
+      <td class="trans">１戦勝利</td>
+      <td class="trans">…国威+6</td>
+    </tr>
+    <tr>
+      <td class="trans">２戦勝利</td>
+      <td class="trans">…国威+11</td>
+    </tr>
+    <tr>
+      <td class="trans">３戦勝利</td>
+      <td class="trans">…国威+16</td>
+    </tr>
+  </table>
+<div class="footmap">
+  [ <a href="index.html">投稿コーナー</a> ]<br>
+</div>
+</div>
+</article>
+
+<script src="../footer.js"></script>
+
+</body>
+</html>

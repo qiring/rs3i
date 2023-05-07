@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>回避・反撃技の発動率ランキング - ロマサガ3のアイテムのページ</title>
+  <link rel="stylesheet" type="text/css" href="../rs3i.css">
+</head>
+
+<body>
+<script src="../header.js"></script>
+
+<article>
+<div class="d1" id="data">
+  <h1>回避・反撃技の発動率ランキング</h1>
+  <div align="right">執筆: モナドさん</div>
+  <p>回避・反撃技の発動率のランキングは次のようになります。</p>
+  <div align="center" class="frame" style="width:17em">
+    <ol class="noindent" style="text-align:left">
+      <li>無形の位</li>
+      <li>無刀取り</li>
+      <li>パリィ</li>
+      <li>カウンター</li>
+      <li>かざぐるま</li>
+      <li>マタドール</li>
+      <li>ジャストミート、切り落とし</li>
+    </ol>
+  </div>
+  <ul>
+    <li>このランキングは、武器レベル、陣形による修正後の攻撃速度、武器の重量のいずれか2つを固定して平等に発動率の差を表したものです。</li>
+    <li>無刀取りとカウンターは、敵の攻撃の種類によって、他の回避・反撃技よりも大きく発動率が変動するため、発動率の順位は変動します。</li>
+    <li>敵の攻撃の中には、回避技が発動しても反撃技は発動しないものがあります。これについては、<a href="http://korotan.xrea.jp/">コロタンの部屋</a>の敵キャラ技リストをご覧になってください。</li>
+  </ul>
+  <h3>回避・反撃技の発動率に影響する要素</h3>
+  <ol>
+    <li>武器レベル</li>
+    <li>陣形による修正後の攻撃速度</li>
+    <li>武器の重量</li>
+  </ol>
+  <p>今、私が発動率に影響していると確信しているのは、上の3つの要素です。<br>
+  武器レベルと陣形による修正後の攻撃速度は高いほど発動率が高く、武器の重量の値は小さいほど発動率が高いです。</p>
+  <p style="color:gray">（管理人注：投稿頂いた記事には「修正後の攻撃速度」の計算式が紹介されていましたが、閲覧者様のご指摘により誤りであることが発覚した為、該当箇所を削除させて頂きました。（情報提供：つめきりさん））</p>
+  <!--
+  <p style="text-decoration:line-through">
+  陣形による修正後の攻撃速度は次の2つの式から求めることができます。<br>
+  </p>
+  <ol style="text-decoration:line-through">
+    <li>攻撃速度=素早さ−(防具の総重量÷2)<br>
+    ・()内は小数点以下切り捨て</li>
+    <li>陣形による修正後の攻撃速度=攻撃速度＋(攻撃速度÷4)×修正値<br>
+    ・()内は小数点以下切り捨て<br>
+    ・修正値は<a href="http://www.yk.rim.or.jp/~s-endo/">遠藤さんのサイト</a>参照</li>
+  </ol>
+  <p style="text-decoration:line-through">
+  3つの要素をまとめると次のようになります。<br>
+  </p>
+  <div class="frame" style="text-decoration:line-through">
+    陣形による修正後の攻撃速度=h−(武器レベル÷2)+(武器の重量÷4)
+  </div>
+  <ul style="text-decoration:line-through">
+    <li>()内はすべて小数点以下切り捨て</li>
+    <li>カウンターの武器重量は0となります。</li>
+    <li>hの値は回避・反撃技の種類によって異なります。</li>
+    <li>h−(武器レベル÷2)が0以下になると、陣形による修正後の攻撃速度と武器の重量の影響がなくなるようです。</li>
+  </ul>
+  -->
+  <p>他には、敵の攻撃の種類も発動率に影響があるかもしれません。<br>
+  燕雀の志さんによればハードヒットや牙などは発動しやすく、チャージや巻きつきなどは発動しにくいらしいです。</p>
+  <h3>実験法</h3>
+  <p>お供レベル最大、5人パーティー、盾・ガーダーなしにし、洞窟寺院跡のアスラに対して状況再現を用いて調べました。<br>
+  全員の戦闘コマンドを回避・反撃技に合わせ、アスラのすぐ下でセーブして、以後Aボタンを押しっぱなしにする方法です。</p>
+  <p>アスラの行動は次のようになっています。</p>
+  <ul>
+    <li>1ターン目：チャージ、ダガージョー</li>
+    <li>2ターン目：牙、烈風剣</li>
+  </ul>
+  <p>1ターン目のチャージと2ターン目の牙は、武器レベル、陣形による修正後の攻撃速度、武器の重量によって、回避・反撃技が発動するときと発動しないときがあります。<br>
+  これを利用して、各種回避・反撃技の発動率の差を調べることができます。<br>
+  </p>
+  <h3>結果</h3>
+  <p>2ターン目の牙に対してのhの値は次のようになりました。</p>
+  <table>
+    <tr>
+      <th style="width:14em"></th>
+      <th>hの値</th>
+    </tr>
+    <tr>
+      <td>無形の位</td>
+      <td align="right">0以下</td>
+    </tr>
+    <tr>
+      <td>無刀取り</td>
+      <td align="right">5</td>
+    </tr>
+    <tr>
+      <td>パリィ</td>
+      <td align="right">7</td>
+    </tr>
+    <tr>
+      <td>カウンター</td>
+      <td align="right">10</td>
+    </tr>
+    <tr>
+      <td>かざぐるま</td>
+      <td align="right">12</td>
+    </tr>
+    <tr>
+      <td>マタドール</td>
+      <td align="right">17</td>
+    </tr>
+    <tr>
+      <td>切り落とし、ジャストミート</td>
+      <td align="right">22</td>
+    </tr>
+  </table>
+  <p>1ターン目のチャージに対して無形の位と無刀取りのhの値は次のようになりました。</p>
+  <table>
+    <tr>
+      <th style="width:14em"></th>
+      <th>hの値</th>
+    </tr>
+    <tr>
+      <td>無形の位</td>
+      <td align="right">23</td>
+    </tr>
+    <tr>
+      <td>無刀取り</td>
+      <td align="right">31</td>
+    </tr>
+  </table>
+  <p>実験法の条件(お供レベル最大、5人パーティー、盾・ガーダーなし)で同様にレオニード城のポイゾンギアンで調べてみました。<br>
+  下の方の宝箱前のポイゾンギアンのすぐ上でセーブし、状況再現を行いました。<br>
+  4ターン目の毒牙に対してhの値を調べると、次のようになりました。</p>
+  <table align="center">
+  <tr>
+    <th style="width:14em"></th>
+    <th>hの値</th>
+  </tr>
+  <tr>
+    <td>無形の位</td>
+    <td align="right">2</td>
+  </tr>
+  <tr>
+    <td>パリィ</td>
+    <td align="right">12</td>
+  </tr>
+  <tr>
+    <td>無刀取り</td>
+    <td align="right">13</td>
+  </tr>
+  <tr>
+    <td>かざぐるま</td>
+    <td align="right">17</td>
+  </tr>
+  <tr>
+    <td>カウンター</td>
+    <td align="right">18</td>
+  </tr>
+  <tr>
+    <td>マタドール</td>
+    <td align="right">22</td>
+  </tr>
+  <tr>
+    <td>切り落とし、ジャストミート</td>
+    <td align="right">27</td>
+  </tr>
+  </table>
+  <h3>参照したサイトや協力をいただいた方々</h3>
+  <p>多くのサイトやいろいろな方々に協力をいただきました。</p>
+  <dl>
+      <dt class="compact" style="width:13em">状況再現</dt>
+      <dd>（コロタンさん「<a href="http://korotan.xrea.jp/">コロタンの部屋</a>」）</dd>
+      <dt class="compact" style="width:13em">素早さ依存</dt>
+      <dd>（duckyさん「<a href="http://www8.plala.or.jp/ultianima/">うるちあにま</a>」）</dd>
+      <dt class="compact" style="width:13em">掲示板</dt>
+      <dd>（D.Iさん「<a href="http://homepage1.nifty.com/di2/">ロマサガ3のモンスターのページ</a>」）</dd>
+      <dt class="compact" style="width:13em">武器重量の影響の可能性</dt>
+      <dd>（ムルムルさん、恍惚屋さん）</dd>
+      <dt class="compact" style="width:13em">敵の攻撃と発動の難度</dt>
+      <dd>（燕雀の志さん）</dd>
+      <dt class="compact" style="width:13em">励ましてくれた方々</dt>
+      <dd>（パパ上さん、ハナさん、神威さん）</dd>
+      <dt class="compact" style="width:13em">レポートの修正</dt>
+      <dd>（wandさん、たかしさん）</dd>
+  </dl>
+  <p>そして投稿を許可してくださったきりんGさん。</p>
+  <p>以上の方々に心より感謝いたします。<br>どうもありがとうございました。<br>
+  </p>
+<div class="footmap">
+  [ <a href="index.html">投稿コーナー</a> ]<br>
+</div>
+</div>
+</article>
+
+<script src="../footer.js"></script>
+
+</body>
+</html>
