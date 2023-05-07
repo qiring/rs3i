@@ -1,1 +1,1 @@
-document.write('<header><div class="d1" id="header"><a href="http://rs3i.web.fc2.com/index.html">ロマサガ3のアイテムのページ</a></div></header>');
+document.write('<header><div class="d1" id="header"><a href="http://qiring.net/rs3/index.html">繝ｭ繝槭し繧ｬ3縺ｮ繧｢繧､繝�繝縺ｮ繝壹�ｼ繧ｸ</a></div></header>');
