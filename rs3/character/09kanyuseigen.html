@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <title>�������� - ���}�T�K3�̃A�C�e���̃y�[�W</title>
+  <title>加入制限 - ロマサガ3のアイテムのページ</title>
   <link rel="stylesheet" type="text/css" href="../rs3i.css">
 </head>
 
@@ -13,109 +13,109 @@
 
 <article>
 <div class="d1" id="data">
-  <h1>��������</h1>
-  <h3>1.�͂��߂�</h3>
+  <h1>加入制限</h1>
+  <h3>1.はじめに</h3>
   <p>
-    ���}�T�K3�ł́u���ԂɂȂ�����𖞂������L���������ԂɂȂ�Ȃ��v�Ƃ����Ƃ�ł��Ȃ����ۂ��N����܂��B<br>
-    ���̌��ۂ�<b>��������</b>�ƌĂт܂��B
+    ロマサガ3では「仲間になる条件を満たしたキャラが仲間にならない」というとんでもない現象が起こります。<br>
+    この現象を<b>加入制限</b>と呼びます。
   </p>
   <p>
-    ���������́A��ɐV�K�������i�܂�͂��߂Ē��Ԃɂ���Ƃ��j�ɂ�����܂��B<br>
-    1�����ĉ������ɉ��������ɂ�����P�[�X������܂����A��O���̗�O�ł��B
+    加入制限は、主に新規加入時（つまりはじめて仲間にするとき）にかかります。<br>
+    1つだけ再加入時に加入制限にかかるケースがありますが、例外中の例外です。
   </p>
   <p>
-    �����ł͎����l������������̉����������܂��B<sup>2�j</sup><br>
-    �����܂ŉ����ł��B�u�����l����΁A���ۂɋN�����������������قڐ����ł���v�Ƃ������x���ł���AROM��͂��瓾��ꂽ�L�����N�^�[�����ݒ�Ƃ͐������قȂ�܂��B<br>
-    �Ȃ��A�����̍ۍ�ƌ������̂��߃Z�[�u�f�[�^��������g�������Ƃ�f���Ă����܂��B
+    ここでは私が考える加入制限の仮説を示します。<sup>2）</sup><br>
+    あくまで仮説です。「こう考えれば、実際に起こった加入制限がほぼ説明できる」というレベルであり、ROM解析から得られたキャラクター初期設定とは性質が異なります。<br>
+    なお、調査の際作業効率化のためセーブデータ改造を駆使したことを断っておきます。
   </p>
-  <h3>2.ANCIENT�̉���</h3>
+  <h3>2.ANCIENTの仮説</h3>
   <br>
   <div align="center">
     <div class="frame" style="text-align:left; width:77%">
       <ol type="a" start="1" class="noindent">
-        <li>�u<a href="04souninzu.html">���l��</a>�����Ԃɂ��悤�Ƃ���L�����̐����l�v�ƂȂ�ƁA���̃L�����͐V�K�������邱�Ƃ��ł��Ȃ��B</li>
+        <li>「<a href="04souninzu.html">総人数</a>≧仲間にしようとするキャラの制限値」となると、そのキャラは新規加入することができない。</li>
       </ol>
     </div>
   </div>
   <p>
-    ���ꂪ��{�ƂȂ�܂��B<br>
-    �e�L�����N�^�[�̐����l�͈ȉ��̂Ƃ���ł��B
+    これが基本となります。<br>
+    各キャラクターの制限値は以下のとおりです。
   </p>
   <div align="center">
     <table>
       <tr>
-        <th style="width:4.8em">�����l</th>
-        <th>�Y������L�����N�^�[</th>
+        <th style="width:4.8em">制限値</th>
+        <th>該当するキャラクター</th>
       </tr>
       <tr>
         <td style="text-align:center">22</td>
-        <td>���I�j�[�h�A�E�H�[�h�A�|�[���A�׃��r���A���l�A�^�`�A�i�A�E���f�B�[�l�A<br>�t���u���C�g�A�m�[���A�悤�����A�{�X�g���A�䂫����܁A�i������l���~�J�G���H�j</td>
+        <td>レオニード、ウォード、ポール、細ロビン、詩人、タチアナ、ウンディーネ、<br>フルブライト、ノーラ、ようせい、ボストン、ゆきだるま、（初期主人公ミカエル？）</td>
       </tr>
       <tr>
         <td style="text-align:center">23</td>
-        <td>�o�C���C�j�����A����</td>
+        <td>バイメイニャン、ぞう</td>
       </tr>
       <tr>
         <td style="text-align:center">24</td>
-        <td>�����@�t�@��</td>
+        <td>ヤン　ファン</td>
       </tr>
       <tr>
         <td style="text-align:center">25</td>
-        <td>�e�B�x���E�X</td>
+        <td>ティベリウス</td>
       </tr>
       <tr>
-        <td style="text-align:center">�����Ȃ�</td>
-        <td>�~���[�Y�A�V���[���A�c�B�[�@�����A�����r���A�n�[�}���A�u���b�N�A���N</td>
+        <td style="text-align:center">制限なし</td>
+        <td>ミューズ、シャール、ツィー　リン、太ロビン、ハーマン、ブラック、少年</td>
       </tr>
     </table>
   </div>
   <p>
-    ���Ƃ��΁A�����l25�̃e�B�x���E�X�͒��Ԃɂ���O�̑��l����24�l�ȉ��Ȃ璇�ԂɂȂ�A 25�l�ȏゾ�ƒ��ԂɂȂ�܂���B<br>
+    たとえば、制限値25のティベリウスは仲間にする前の総人数が24人以下なら仲間になり、 25人以上だと仲間になりません。<br>
   </p>
   <p>
-    �����܂ł���{�����ł��B<br>
-    ����ɕ⑫�����Ɨ�O�������܂��B<br>
+    ここまでが基本事項です。<br>
+    これに補足事項と例外が加わります。<br>
   </p>
   <div align="center">
     <div class="frame" style="text-align:left; width:77%">
       <ol type="a" start="2" class="noindent">
-        <li>�����l���u�����Ȃ��v�ɂȂ��Ă���L�����͉��������ɂ�����Ȃ��B</li>
-        <li>���C���L����8�l�͉��������ɂ�����Ȃ��B�i��O����j</li>
-        <li>���B�L����������������������Ȃ��B</li>
-        <li>���ԂɂȂ�P�[�X����������L�����ł��S�ē��������l���g����B�i��O����j</li>
+        <li>制限値が「制限なし」になっているキャラは加入制限にかからない。</li>
+        <li>メインキャラ8人は加入制限にかからない。（例外あり）</li>
+        <li>増殖キャラも加入制限がかからない。</li>
+        <li>仲間になるケースが複数あるキャラでも全て同じ制限値が使われる。（例外あり）</li>
       </ol>
     </div>
   </div>
   <p>
-    ��.��e.�ɂ���悤�ɗ�O���m�F����Ă��܂��B���̂Ƃ��뎟��3�_�ł��B<br>
+    ｃ.とe.にあるように例外が確認されています。今のところ次の3点です。<br>
   </p>
-  <h4>���r���e�q</h4>
+  <h4>ロビン親子</h4>
   <p>
-    �׃��r���ɉ����������������Ă���i�����l��22�l�ȏ�ŁA�׃��r�������ԂɂȂ������Ƃ��Ȃ��j�Ƃ��A���������ɂ�����Ȃ��͂��̑����r�����V�K�����ł��Ȃ��B<br>
-    ���r���e�q���~���Ă�������̒��ɍ׃��r���̉��������l���܂܂�Ă���Ǝv����B<br>
-    �����r���𒇊Ԃɂ���ɂ́A���O�ɑ��l��21�l�ȉ��ō׃��r���𒇊Ԃɂ��Ă����K�v������B�׃��r���𒇊Ԃɂ��Ă����΁A�����r���͂��ł����Ԃɂł���B<br>
+    細ロビンに加入制限がかかっている（＝総人数22人以上で、細ロビンが仲間になったことがない）とき、加入制限にかからないはずの太ロビンが新規加入できない。<br>
+    ロビン親子が降ってくる条件の中に細ロビンの加入制限値が含まれていると思われる。<br>
+    太ロビンを仲間にするには、事前に総人数21人以下で細ロビンを仲間にしておく必要がある。細ロビンを仲間にしておけば、太ロビンはいつでも仲間にできる。<br>
   </p>
-  <h4>�o�C�@���C�j�����ƃ����@�t�@��</h4>
+  <h4>バイ　メイニャンとヤン　ファン</h4>
   <p>
-    �p�[�e�B�[�̐l����3�l�ȉ��̏�ԂŃ[���i�����̑���@���C�x���g�𔭐�������ƁA�o�C�@���C�j�����ƃ����@�t�@�����ⓚ���p�ŐV�K��������B<br>
-    ���̂Ƃ��ɂ������l����23�l�ł���ꍇ�A�����l��23�ł���o�C�@���C�j�����͐V�K�����ł��Ȃ����A�����l��24�̃����@�t�@�������l�ɐV�K�������Ȃ��B�܂�A���l����23�l�ȏ�̂Ƃ���2�l�Ƃ����ԂɂȂ�Ȃ��B<br>
-    ����2�������ԂɂȂ�����ɁA�o�C�@���C�j�����̉��������l���g���Ă���A�ƍl������B<br>
-    ���Ȃ݂ɂ��̌�A���l��23���ێ������܂܉����˓��C�x���g���N�������Ƃɂ��A�����@�t�@���̐V�K�����͉\�B<br>
+    パーティーの人数が3人以下の状態でゼルナム族の巣を叩くイベントを発生させると、バイ　メイニャンとヤン　ファンが問答無用で新規加入する。<br>
+    このときにもし総人数が23人である場合、制限値が23であるバイ　メイニャンは新規加入できないが、制限値が24のヤン　ファンも同様に新規加入しない。つまり、総人数が23人以上のときは2人とも仲間にならない。<br>
+    この2名が仲間になる条件に、バイ　メイニャンの加入制限値が使われている、と考えられる。<br>
+    ちなみにこの後、総人数23を維持したまま黄京突入イベントを起こすことにより、ヤン　ファンの新規加入は可能。<br>
   </p>
-  <h4>������l���~�J�G��</h4>
+  <h4>初期主人公ミカエル</h4>
   <p>
-    ������l���i�Q�[���J�n���̎�l���j���~�J�G���̎��͓���B<br>
-    ��l���ύX���l���M�����������ґh���̌�ɁA�~�J�G�����ăX�J�E�g����Ƃ����l����22�l�ȏゾ�ƒ��Ԃɂł��Ȃ��B<br>
-    �f�[�^���ۑ�����Ă���i�܂�V�K�����łȂ��j�̂ɐ�����������ɂ߂ē���ȗ�B
+    初期主人公（ゲーム開始時の主人公）がミカエルの時は特殊。<br>
+    主人公変更→四魔貴族討伐→死者蘇生の後に、ミカエルを再スカウトするとき総人数が22人以上だと仲間にできない。<br>
+    データが保存されている（つまり新規加入でない）のに制限がかかる極めて特殊な例。
   </p>
   <h3>Special Thanks</h3>
   <ol start="2">
-    <li>�����\�z�ɂ������āAwand����ɋ��͂��Ă��������܂����B<br>
+    <li>仮説構築にあたって、wandさんに協力していただきました。<br>
     </li>
   </ol>
 <div class="footmap">
-  [ <a href="08buglvup2.html">�O��</a> ][ <a href="10ninzuseigen.html">����</a> ]<br>
-  [ <a href="index.html">�L�����N�^�[�����ݒ�@�g�b�v</a> ]<br>
+  [ <a href="08buglvup2.html">前へ</a> ][ <a href="10ninzuseigen.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
 </div>
 </div>
 </article>

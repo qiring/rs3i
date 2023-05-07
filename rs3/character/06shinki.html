@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <title>�V�K���������o�[�̐��� - ���}�T�K3�̃A�C�e���̃y�[�W</title>
+  <title>新規加入メンバーの成長 - ロマサガ3のアイテムのページ</title>
   <link rel="stylesheet" type="text/css" href="../rs3i.css">
 </head>
 
@@ -13,93 +13,93 @@
 
 <article>
 <div class="d1" id="data">
-  <h1>�V�K���������o�[�̐���</h1>
-  <h3>1.�V�K���������o�[�̐����Ƃ́H</h3>
+  <h1>新規加入メンバーの成長</h1>
+  <h3>1.新規加入メンバーの成長とは？</h3>
   <p>
-    �T�u�L�����N�^�[���V�K���������Ƃ�����E�pLv�́A<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>�̐��l�ƈقȂ鎖������܂��B<br>
-    ����ɁAWP��JP���󋵂ɉ����ĕω����܂��B<br>
+    サブキャラクターが新規加入したとき武器・術Lvは、<a href="03default2.html">キャラクター初期設定2</a>の数値と異なる事があります。<br>
+    さらに、WPやJPも状況に応じて変化します。<br>
     <br>
-    �����V�K���������o�[�̐����ƌĂт܂��B<br>
-    �ĉ��������o�[�̐����Ɠ������A�d�g�݂Ƌ�̗�������܂��B<br>
+    これを新規加入メンバーの成長と呼びます。<br>
+    再加入メンバーの成長と同じく、仕組みと具体例を示します。<br>
   </p>
-  <h3>2.�V�K���������o�[�̐����̎d�g��</h3>
+  <h3>2.新規加入メンバーの成長の仕組み</h3>
   <p>
-    �V���ɒ��Ԃ�������Ƃ��͍ĉ��������o�[�̂Ƃ��Ə󋵁A�U�������قȂ�܂��B<br>
+    新たに仲間を加えるときは再加入メンバーのときと状況、振舞いが異なります。<br>
     <br>
-    �܂��A�O��ƂȂ�L�����N�^�[�̃f�[�^���Z�[�u�f�[�^��ɑ��݂��܂���B<br>
-    ������<strong>ROM��̃L�����N�^�[�����ݒ�</strong>�����[�h���A�������b�Ƃ��܂��B<br>
-    ���[�h����鐔�l�́A<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>�̕���E�p�E����Lv�ł��B<br>
+    まず、前提となるキャラクターのデータがセーブデータ上に存在しません。<br>
+    そこで<strong>ROM上のキャラクター初期設定</strong>をロードし、これを基礎とします。<br>
+    ロードされる数値は、<a href="03default2.html">キャラクター初期設定2</a>の武器・術・増幅Lvです。<br>
     <br>
-    �ĉ��������o�[�̐����̂Ƃ��́A�ĉ������ƊO�����Ƃ��̂������x���̍��������̎ړx�ł������A�V�K�����̏ꍇ�A<strong>���������Ƃ��̂������x���̂�</strong>�������̎ړx�Ƃ��Ďg���܂��B<br>
-    <strong>���̖@�����t�ɗ��p���邱�ƂŁA���@�ł��������x���̒l���v�Z�ł��܂�</strong>�B<br>
-  </p>
-    <div align="center">
-    <div class="frame" style="width:70%">
-    ����Lv��HP�㏸�l��15�~8�@�i�ő�덷�́|7�j
-    </div>
-    </div>
-  <p>
-    �㏸����p�����[�^�͉����σ����o�[�̐����Ɠ������A<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>��<font color="#FF0000"><b>�Ԏ�</b></font>�ŕ\������Ă�����̂����ł��B<br>
-    ����ɁA<strong>�����ŏ��߂�WP�JP���A���������Ƃ��̕���E�p���x������v�Z����܂��B</strong><br>
-    ���̂���ROM��̃L�����N�^�[�����ݒ�ɏ���WP�JP�Ƃ����T�O�͑��݂��܂���B<br>
-    <br>
-    �V�K���������Ƃ��̊e�p�����[�^�̒l�͎��̒ʂ�B�i����������̂̂݁j<br>
+    再加入メンバーの成長のときは、再加入時と外したときのお供レベルの差が成長の尺度でしたが、新規加入の場合、<strong>加入したときのお供レベルのみ</strong>が成長の尺度として使われます。<br>
+    <strong>この法則を逆に利用することで、実機でもお供レベルの値が計算できます</strong>。<br>
   </p>
     <div align="center">
     <div class="frame" style="width:70%">
-            HP������HP�{�i����Lv��8�j�~15<br>
-            ����E�p�E����Lv������Lv�{�i����Lv��16�j<br>
-            �������A�ǂ�����i���J�b�R�j�������_�ȉ��؂�̂�
+    お供Lv＝HP上昇値÷15×8　（最大誤差は−7）
+    </div>
+    </div>
+  <p>
+    上昇するパラメータは加入済メンバーの成長と同じく、<a href="03default2.html">キャラクター初期設定2</a>で<font color="#FF0000"><b>赤字</b></font>で表示されているものだけです。<br>
+    さらに、<strong>ここで初めてWP･JPが、加入したときの武器・術レベルから計算されます。</strong><br>
+    このためROM上のキャラクター初期設定に初期WP･JPという概念は存在しません。<br>
+    <br>
+    新規加入したときの各パラメータの値は次の通り。（成長するもののみ）<br>
+  </p>
+    <div align="center">
+    <div class="frame" style="width:70%">
+            HP＝初期HP＋（お供Lv÷8）×15<br>
+            武器・術・増幅Lv＝初期Lv＋（お供Lv÷16）<br>
+            ただし、どちらも（小カッコ）を小数点以下切り捨て
     </div>
     <br>
     <div class="frame" style="width:70%">
-            WP���ő啐��Lv�~3�{���̑��̕���Lv�̍��v<br>
-            JP���ő�pLv�~3�{���̑��̏pLv�̍��v<br>
-            �������A�ő啐����pLv���������鎞�͂P������I��
+            WP＝最大武器Lv×3＋その他の武器Lvの合計<br>
+            JP＝最大術Lv×3＋その他の術Lvの合計<br>
+            ただし、最大武器･術Lvが複数ある時は１つだけを選ぶ
     </div>
     <br>
     <div align="left" style="width:50%">
-        ����HP�F<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>�̏���HP<br>
-        ����Lv�F<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>�̏���������p���x��<br>
-        �ő啐��i�p�jLv�F�V�K�������ł��傫�Ȓl���Ƃ�������i�p�jLv
+        初期HP：<a href="03default2.html">キャラクター初期設定2</a>の初期HP<br>
+        初期Lv：<a href="03default2.html">キャラクター初期設定2</a>の初期武器･術レベル<br>
+        最大武器（術）Lv：新規加入時最も大きな値をとった武器（術）Lv
     </div>
     <br>
     <table>
     <tr>
-    <td class="trans" valign="top">���F</td>
+    <td class="trans" valign="top">注：</td>
     <td class="trans">
-        <strong>��l�����������C���L����7�l�̓Q�[���J�n�Ɠ����ɐV�K����</strong>�������̂ƌ��Ȃ���܂��B<br>
-        �]����HP�A����E�pLv�͏����ݒ�Ɠ����ɂȂ�AWP�JP���������狁�߂��܂��B<br>
+        <strong>主人公を除くメインキャラ7人はゲーム開始と同時に新規加入</strong>したものと見なされます。<br>
+        従ってHP、武器・術Lvは初期設定と同じになり、WP･JPもここから求められます。<br>
         <br>
-        <strong>��l�����Q�[���J�n�Ɠ����ɃJ�E���g</strong>����邱�ƂɂȂ�܂����A�I�񂾓��ӕ���ɂ���ĕ���Lv���C������܂��B<br>
-        ��̓I�ɂ́A<strong>���ӕ���ɑI�񂾕��탌�x�����u<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>�̐��l+1�v</strong>�ɂȂ�܂��B<br>
-        WP�͏C����̕��탌�x������L��WP�̎��ɑ�����邱�Ƃŋ��߂��܂��B<br>
-        ���ӕ�����u�Ȃ��v�ɂ����ꍇ�AJP��5�ƂȂ�܂��B
+        <strong>主人公もゲーム開始と同時にカウント</strong>されることになりますが、選んだ得意武器によって武器Lvが修正されます。<br>
+        具体的には、<strong>得意武器に選んだ武器レベルが「<a href="03default2.html">キャラクター初期設定2</a>の数値+1」</strong>になります。<br>
+        WPは修正後の武器レベルを上記のWPの式に代入することで求められます。<br>
+        得意武器を「なし」にした場合、JPが5となります。
     </td>
     </tr>
     </table>
     </div>
-  <h3>3.��̗�</h3>
+  <h3>3.具体例</h3>
   <p>
-    �ΏہF�V���[��<br>
-    �V�K�������̂������x���F102<br>
+    対象：シャール<br>
+    新規加入時のお供レベル：102<br>
   </p>
   <div align="center">
     <table>
-      <caption>�����ݒ�̊e�p�����[�^</caption>
+      <caption>初期設定の各パラメータ</caption>
       <tr>
-        <th width="40">����Lv</th>
+        <th width="40">お供Lv</th>
         <th width="40">HP</th>
         <th width="40">WP</th>
         <th width="40">JP</th>
-        <th width="50">���E�匕Lv</th>
-        <th width="50">���E���_Lv</th>
-        <th width="50">�����E��Lv</th>
-        <th width="50">�|Lv</th>
-        <th width="50">�̏pLv</th>
-        <th width="50">�n�pLv</th>
-        <th width="50">�V�pLv</th>
-        <th width="50">����Lv</th>
+        <th width="50">剣・大剣Lv</th>
+        <th width="50">斧・棍棒Lv</th>
+        <th width="50">小剣・槍Lv</th>
+        <th width="50">弓Lv</th>
+        <th width="50">体術Lv</th>
+        <th width="50">地術Lv</th>
+        <th width="50">天術Lv</th>
+        <th width="50">増幅Lv</th>
       </tr>
       <tr>
         <td align="center" width="40">-</td>
@@ -111,27 +111,27 @@
         <td align="center" width="50">15</td>
         <td align="center" width="50">0</td>
         <td align="center" width="50">0</td>
-        <td align="center" width="50"><font color="#FF0000"><strong>�钹15</strong></td>
-        <td align="center" width="50">�Ȃ�0</td>
+        <td align="center" width="50"><font color="#FF0000"><strong>朱鳥15</strong></td>
+        <td align="center" width="50">なし0</td>
         <td align="center" width="50">6</td>
       </tr>
     </table>
     <br>
     <table>
-      <caption>�V�K�������̊e�p�����[�^</caption>
+      <caption>新規加入時の各パラメータ</caption>
       <tr>
-        <th width="40">����Lv</th>
+        <th width="40">お供Lv</th>
         <th width="40">HP</th>
         <th width="40">WP</th>
         <th width="40">JP</th>
-        <th width="50">���E�匕Lv</th>
-        <th width="50">���E���_Lv</th>
-        <th width="50">�����E��Lv</th>
-        <th width="50">�|Lv</th>
-        <th width="50">�̏pLv</th>
-        <th width="50">�n�pLv</th>
-        <th width="50">�V�pLv</th>
-        <th width="50">����Lv</th>
+        <th width="50">剣・大剣Lv</th>
+        <th width="50">斧・棍棒Lv</th>
+        <th width="50">小剣・槍Lv</th>
+        <th width="50">弓Lv</th>
+        <th width="50">体術Lv</th>
+        <th width="50">地術Lv</th>
+        <th width="50">天術Lv</th>
+        <th width="50">増幅Lv</th>
       </tr>
       <tr>
         <td align="center" width="40">102</td>
@@ -143,22 +143,22 @@
         <td align="center" width="50">15</td>
         <td align="center" width="50">0</td>
         <td align="center" width="50">0</td>
-        <td align="center" width="50"><font color="#FF0000"><strong>�钹21</strong></td>
-        <td align="center" width="50">�Ȃ�0</td>
+        <td align="center" width="50"><font color="#FF0000"><strong>朱鳥21</strong></td>
+        <td align="center" width="50">なし0</td>
         <td align="center" width="50">6</td>
       </tr>
     </table>
   </div>
   <p>
-    HP��240�{�i102��8�j�~15��420���㏸�l180<br>
-    ����E�p�E����Lv������Lv�{�i102��16�j���㏸�l6<br>
-    �������A�ǂ�����i���J�b�R�j�������_�ȉ��؂�̂�<br>
-    WP��15�~3�{10�{0�{0�{0��55<br>
-    JP��21�~3�{0��63<br>
+    HP＝240＋（102÷8）×15＝420→上昇値180<br>
+    武器・術・増幅Lv＝初期Lv＋（102÷16）→上昇値6<br>
+    ただし、どちらも（小カッコ）を小数点以下切り捨て<br>
+    WP＝15×3＋10＋0＋0＋0＝55<br>
+    JP＝21×3＋0＝63<br>
   </p>
 <div class="footmap">
-  [ <a href="05saikanyu.html">�O��</a> ][ <a href="07buglvup1.html">����</a> ]<br>
-  [ <a href="index.html">�L�����N�^�[�����ݒ�@�g�b�v</a> ]<br>
+  [ <a href="05saikanyu.html">前へ</a> ][ <a href="07buglvup1.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
 </div>
 </div>
 </article>

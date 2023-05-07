@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <title>�ĉ��������o�[�̐��� - ���}�T�K3�̃A�C�e���̃y�[�W</title>
+  <title>再加入メンバーの成長 - ロマサガ3のアイテムのページ</title>
   <link rel="stylesheet" type="text/css" href="../rs3i.css">
 </head>
 
@@ -13,62 +13,62 @@
 
 <article>
 <div class="d1" id="data">
-  <h1>�ĉ��������o�[�̐���</h1>
-  <h3>1.�ĉ��������o�[�̐����Ƃ́H</h3>
+  <h1>再加入メンバーの成長</h1>
+  <h3>1.再加入メンバーの成長とは？</h3>
   <p>
-    �ʂꂽ���Ԃ��Ăуp�[�e�B�[�ɓ����ƊO�����Ƃ���苭���Ȃ��Ă��邱�Ƃ�����܂��B<br>
-    �����<strong>�ĉ��������o�[�̐���</strong>�ƌĂт܂��B<br>
-    ���̌��ۂ̎d�g�݂������A��̗�������Ă����܂��B<br>
+    別れた仲間を再びパーティーに入れると外したときより強くなっていることがあります。<br>
+    これを<strong>再加入メンバーの成長</strong>と呼びます。<br>
+    この現象の仕組みを示し、具体例を挙げておきます。<br>
   </p>
-  <h3>2.�ĉ��������o�[�̐����̎d�g��</h3>
+  <h3>2.再加入メンバーの成長の仕組み</h3>
   <p>
-    �ʂꂽ���Ԃ̃f�[�^�́A�Z�[�u�f�[�^����<a href="04souninzu.html">�p�[�e�B�[�O�����o�[�̃X�y�[�X</a>�ɕۑ�����܂��B<br>
-    �i��O������܂��B���̗�O��<a href="07buglvup1.html">�o�O���x���A�b�v</a>�̌����ƂȂ�܂��j<br>
+    別れた仲間のデータは、セーブデータ中の<a href="04souninzu.html">パーティー外メンバーのスペース</a>に保存されます。<br>
+    （例外があります。この例外が<a href="07buglvup1.html">バグレベルアップ</a>の原因となります）<br>
     <br>
-    ���̎��A���ꂼ��̃����o�[��<strong>�O�ꂽ�Ƃ��̂������x��</strong>���L�^����܂��B<br>
-    �����čĉ��������Ƃ��ɁA�ʂꂽ�Ƃ��ƍĉ���Ƃ��̂������x���̍����琬���ʂ��v�Z����܂��B<br>
-    �܂�A�p�[�e�B�[�O�����o�[�͐퓬���ɐ������Ă���̂ł͂Ȃ��A�ĉ��������Ƃ���<strong>�������x���̍��𗘗p���Ĉ�x�ɐ�������</strong>�Ƃ������Ƃł��B<br>
+    この時、それぞれのメンバーが<strong>外れたときのお供レベル</strong>が記録されます。<br>
+    そして再加入したときに、別れたときと再会したときのお供レベルの差から成長量が計算されます。<br>
+    つまり、パーティー外メンバーは戦闘毎に成長しているのではなく、再加入したときに<strong>お供レベルの差を利用して一度に成長する</strong>ということです。<br>
     <br>
-    �㏸����p�����[�^��<a href="03default2.html">�L�����N�^�[�����ݒ�2</a>��<font color="red"><b>�Ԏ�</b></font>�ŕ\������Ă�����̂����ł��B�ق��̏p�E����E����Lv��WP�JP�͊O�����Ƃ�����ω����܂���B<br>
-    �ĉ��������Ƃ��̊e�p�����[�^�̒l�͎��̒ʂ�i����������̂̂݁j�B<br>
+    上昇するパラメータは<a href="03default2.html">キャラクター初期設定2</a>で<font color="red"><b>赤字</b></font>で表示されているものだけです。ほかの術・武器・増幅LvやWP･JPは外したときから変化しません。<br>
+    再加入したときの各パラメータの値は次の通り（成長するもののみ）。<br>
   </p>
     <div align="center">
     <div class="frame" style="width:60%">
-                <td>HP���OHP�{�o�iB�|A�j��8�p�~15<br>
-                ����E�p�E����Lv���OLv�{�o�iB�|A�j��16�p</td>
+                <td>HP＝前HP＋｛（B−A）÷8｝×15<br>
+                武器・術・増幅Lv＝前Lv＋｛（B−A）÷16｝</td>
     </div>
     <div align="left" style="width:50%">
-            �������A�ǂ�����o���J�b�R�p�������_�ȉ��؂�̂�<br>
+            ただし、どちらも｛中カッコ｝を小数点以下切り捨て<br>
             <br>
-            A�F�O�����Ƃ��̂������x��<br>
-            B�F�ĉ��������Ƃ��̂������x��<br>
-            �OHP�F�O�����Ƃ���HP<br>
-            �OLv�F�O�����Ƃ��̕���E�p�E�������x��<br>
+            A：外したときのお供レベル<br>
+            B：再加入したときのお供レベル<br>
+            前HP：外したときのHP<br>
+            前Lv：外したときの武器・術・増幅レベル<br>
     </div>
     </div>
-  <h3>3.��̗�</h3>
+  <h3>3.具体例</h3>
   <p>
-    �ΏہF���r���i�ׁj<br>
+    対象：ロビン（細）<br>
     <br>
-    �O�����Ƃ��̂������x���F26<br>
-    �ĉ���Ƃ��̂������x���F119<br>
+    外したときのお供レベル：26<br>
+    再会したときのお供レベル：119<br>
   </p>
   <div align="center">
     <table>
-      <caption>�O�����Ƃ��̊e�p�����[�^</caption>
+      <caption>外したときの各パラメータ</caption>
       <tr>
-        <th width="40">����Lv</th>
+        <th width="40">お供Lv</th>
         <th width="40">HP</th>
         <th width="40">WP</th>
         <th width="40">JP</th>
-        <th width="50">���E�匕Lv</th>
-        <th width="50">���E���_Lv</th>
-        <th width="50">�����E��Lv</th>
-        <th width="50">�|Lv</th>
-        <th width="50">�̏pLv</th>
-        <th width="50">�n�pLv</th>
-        <th width="50">�V�pLv</th>
-        <th width="50">����Lv</th>
+        <th width="50">剣・大剣Lv</th>
+        <th width="50">斧・棍棒Lv</th>
+        <th width="50">小剣・槍Lv</th>
+        <th width="50">弓Lv</th>
+        <th width="50">体術Lv</th>
+        <th width="50">地術Lv</th>
+        <th width="50">天術Lv</th>
+        <th width="50">増幅Lv</th>
       </tr>
       <tr>
         <td align="center" width="40">26</td>
@@ -80,27 +80,27 @@
         <td align="center" width="50"><font color="red"><b>28</b></font></td>
         <td align="center" width="50">8</td>
         <td align="center" width="50">4</td>
-        <td align="center" width="50"><font color="red"><b>����21</b></font></td>
-        <td align="center" width="50">���z15</td>
+        <td align="center" width="50"><font color="red"><b>蒼龍21</b></font></td>
+        <td align="center" width="50">太陽15</td>
         <td align="center" width="50">6</td>
       </tr>
     </table>
     <br>
     <table>
-      <caption>�ĉ��������Ƃ��̊e�p�����[�^</caption>
+      <caption>再加入したときの各パラメータ</caption>
       <tr>
-        <th width="40">����Lv</th>
+        <th width="40">お供Lv</th>
         <th width="40">HP</th>
         <th width="40">WP</th>
         <th width="40">JP</th>
-        <th width="50">���E�匕Lv</th>
-        <th width="50">���E���_Lv</th>
-        <th width="50">�����E��Lv</th>
-        <th width="50">�|Lv</th>
-        <th width="50">�̏pLv</th>
-        <th width="50">�n�pLv</th>
-        <th width="50">�V�pLv</th>
-        <th width="50">����Lv</th>
+        <th width="50">剣・大剣Lv</th>
+        <th width="50">斧・棍棒Lv</th>
+        <th width="50">小剣・槍Lv</th>
+        <th width="50">弓Lv</th>
+        <th width="50">体術Lv</th>
+        <th width="50">地術Lv</th>
+        <th width="50">天術Lv</th>
+        <th width="50">増幅Lv</th>
       </tr>
       <tr>
         <td align="center" width="40">119</td>
@@ -112,20 +112,20 @@
         <td align="center" width="50"><font color="red"><b>33</b></td>
         <td align="center" width="50">8</td>
         <td align="center" width="50">4</td>
-        <td align="center" width="50"><font color="red"><b>����26</b></td>
-        <td align="center" width="50">���z15</td>
+        <td align="center" width="50"><font color="red"><b>蒼龍26</b></td>
+        <td align="center" width="50">太陽15</td>
         <td align="center" width="50">6</td>
       </tr>
     </table>
   </div>
   <p>
-    HP��389�{�o�i119�|26�j��8�p�~15��554���㏸�l165�@<br>
-    ����E�p�E����Lv���OLv�{�o�i119�|26�j��16�p���㏸�l5<br>
-    ���ǂ�����o���J�b�R�p�������_�ȉ��؂�̂�
+    HP＝389＋｛（119−26）÷8｝×15＝554→上昇値165　<br>
+    武器・術・増幅Lv＝前Lv＋｛（119−26）÷16｝→上昇値5<br>
+    ※どちらも｛中カッコ｝を小数点以下切り捨て
   </p>
 <div class="footmap">
-  [ <a href="04souninzu.html">�O��</a> ][ <a href="06shinki.html">����</a> ]<br>
-  [ <a href="index.html">�L�����N�^�[�����ݒ�@�g�b�v</a> ]<br>
+  [ <a href="04souninzu.html">前へ</a> ][ <a href="06shinki.html">次へ</a> ]<br>
+  [ <a href="index.html">キャラクター加入設定　トップ</a> ]<br>
 </div>
 </div>
 </article>
