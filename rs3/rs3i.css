@@ -291,11 +291,12 @@ span.name {
 /*  float        : left;*/
 }
 
-span.link {
+span.note {
 /*  float        : right;*/
+  margin-left   : 0.5em;
   vertical-align: super;
-  font-size: smaller;
-  font-weight    : normal;
+  font-size     : 0.7em;
+  font-weight   : normal;
 }
 
 /*div.index {
