@@ -288,11 +288,14 @@ blockquote {
 /* ------------------------------- */
 
 span.name {
-  float        : left;
+/*  float        : left;*/
 }
 
 span.link {
-  float        : right;
+/*  float        : right;*/
+  vertical-align: super;
+  font-size: smaller;
+  font-weight    : normal;
 }
 
 /*div.index {
