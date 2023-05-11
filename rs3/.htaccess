@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.qiring.net\.com$
+RewriteCond %{HTTP_HOST} ^www\.qiring\.net$
 RewriteRule ^(.*)$ https://qiring.net/$1 [R=301,L]
 RewriteEngine on
 RewriteCond %{THE_REQUEST} ^.*/index.html
