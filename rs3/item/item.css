@@ -1,17 +1,17 @@
 table.item {
 }
 
-.item .NAME { width: 11.0em; }
-.item .WGTH { width:  2.5em; text-align:right; }
-.item .HOWT { width:   auto; }
-.item .NOTE { width:   auto; }
-.item .BUKI { width:  3.0em; text-align:right; }
-.item .RATE { width:  4.0em; text-align:right; }
-.item .TOKU { width:  5.0em; }
-.item .ZOKU { width:  8.0em; }
-.item .WAZA { width: 10.5em; }
-.item .BOGU { width:  1.5em; text-align:right; border-right:0px solid; }
-.item .TOLE { width:  6.0em;                   border-left :0px solid; }
+.item .name { width: 11.0em; }
+.item .wgth { width:  2.5em; text-align:right; }
+.item .howt { width:   auto; }
+.item .note { width:   auto; }
+.item .buki { width:  3.0em; text-align:right; }
+.item .rate { width:  4.0em; text-align:right; }
+.item .toku { width:  5.0em; }
+.item .zoku { width:  8.0em; }
+.item .waza { width: 10.5em; }
+.item .bogu { width:  1.5em; text-align:right; border-right:0px solid; }
+.item .tole { width:  6.0em;                   border-left :0px solid; }
 
 @media screen and (max-width: 1080px) { /*ウィンドウ幅が最大1080pxまでの場合に適用*/
 	#data {
@@ -20,13 +20,13 @@ table.item {
   .item {
     min-width: 720px;
   }
-  .item .HOWT {
+  .item .howt {
     font-size: 0.4em;
   }
-  .item .ZOKU {
+  .item .zoku {
     width:  5.0em;
   }
-  .item .TOLE {
+  .item .tole {
     width:  3.0em;
   }
 }
